@@ -7,9 +7,10 @@
       </h1>
       <div class="links">
         <a href="https://twitter.com/c3_kyutech?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @c3_kyutech</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <br/>
         <!-- <a href="https://github.com/Kyutech-C3/OpenCampus2021" target="_blank" class="github-follow-button"><img src="https://gh-card.dev/repos/Kyutech-C3/OpenCampus2021.svg"></a> -->
         <a href="https://github.com/Kyutech-C3/OpenCampus2021" target="_blank" title="tbpgrのGitHubページを開く">
-          <i class="fa fa-github-square" style="color: black; font-size:2em"></i>
+          <fa :icon="['fab','github']" style="font-size: 2em;"/>
         </a> 
       </div>
     </div>

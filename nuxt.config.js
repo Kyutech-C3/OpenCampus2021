@@ -32,7 +32,18 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'nuxt-fontawesome',
   ],
+
+  fontawesome: {
+    component: "fa",
+    imports: [
+      {
+        set: "@fortawesome/free-brands-svg-icons", // Brandアイコン
+        icons: ["faGithub"],
+      },
+    ],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
