@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        Open-Campus-2021
+        OpenCampus2021
       </h1>
       <div class="links">
         <a

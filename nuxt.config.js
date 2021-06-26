@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Open-Campus-2021',
+    title: 'C3 OpenCampus2021',
     htmlAttrs: {
       lang: 'jp'
     },
