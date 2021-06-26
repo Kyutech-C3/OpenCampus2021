@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
+      <img src="../assets/img/C3_summer_logo.png" alt="C3 summer logo" title="C3 summer logo" />
       <h1 class="title">
-        OpenCampus2021
+        Coming Soon
       </h1>
       <div class="links">
         <a
@@ -69,5 +69,9 @@ export default {}
 
 .links {
   padding-top: 15px;
+}
+img {
+  width: 300px;
+  height: auto;
 }
 </style>
