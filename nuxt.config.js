@@ -36,5 +36,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  storybook: {
+    addons: [
+      '@storybook/addon-actions/register',
+      '@storybook/addon-backgrounds/register',
+      '@storybook/addon-controls/register',
+      '@storybook/addon-docs/register',
+      '@storybook/addon-toolbars/register',
+      '@storybook/addon-viewport/register',
+    ],
+  },
 }
