@@ -44,7 +44,7 @@ ex) `[add] #2 ファイルの追加`
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 ## tl;dr
-OenCampus2020 Official Site のリメイク版OenCampus2021 Official Site の開発
+OpenCampus2020 Official Site のリメイク版OpenCampus2021 Official Site の開発
 
 ## 開発
 **決められた担当の開発を自分でissueを立てて行う.**
