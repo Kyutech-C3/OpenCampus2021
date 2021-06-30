@@ -16,7 +16,30 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
+## ブランチを切る前に
+- 現在のブランチが```develop```ブランチであることを確認する
 
+## ブランチの命名規則
+- issueを立てる
+- issue/[番号]の名前でブランチを切る
+ex)```#2``` なら　```issue/2```　
+
+## コミットメッセージの書き方
+- fix：バグ修正
+- hotfix：クリティカルなバグ修正
+- add：新規（ファイル）機能追加
+- update：機能修正（バグではない）
+- change：仕様変更
+- clean：整理（リファクタリング等）
+- disable：無効化（コメントアウト等）
+- remove：削除（ファイル）
+- upgrade：バージョンアップ
+- revert：変更取り消し
+
+- issueとのリンクを作る
+ex)[add] #2 ファイルの追加
+
+## 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 ## tl;dr
