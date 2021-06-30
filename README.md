@@ -17,12 +17,12 @@ $ npm run start
 $ npm run generate
 ```
 ## ブランチを切る前に
-- 現在のブランチが```develop```ブランチであることを確認する
+- 現在のブランチが`develop`ブランチであることを確認する
 
 ## ブランチの命名規則
 - issueを立てる
-- issue/[番号]の名前でブランチを切る
-ex)```#2``` なら　```issue/2```　
+- issue/[番号]の名前でブランチを切る  
+ex) `#2` なら　`issue/2`
 
 ## コミットメッセージの書き方
 - fix：バグ修正
@@ -36,8 +36,9 @@ ex)```#2``` なら　```issue/2```　
 - upgrade：バージョンアップ
 - revert：変更取り消し
 
-- issueとのリンクを作る
-ex)[add] #2 ファイルの追加
+### issueとのリンクを作る
+
+ex) `[add] #2 ファイルの追加`  
 
 ## 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
