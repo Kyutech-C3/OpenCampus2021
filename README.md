@@ -34,7 +34,6 @@ OenCampus2020 Official Site のリメイク版OenCampus2021 Official Site の開
 - そとはね
 
 **フロント**
-- rkun
 - ふぃる
 - shuuuu
 - シモ
