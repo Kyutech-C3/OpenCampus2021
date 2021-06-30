@@ -25,7 +25,7 @@ OenCampus2020 Official Site のリメイク版OenCampus2021 Official Site の開
 ## 開発
 **決められた担当の開発を自分でissueを立てて行う.**
 
-**暫定版は ```develop```ブランチにマージ, 安定版は ```master```ブランチにマージ**
+**暫定版は ```develop```ブランチにマージ, 安定版は ```main```ブランチにマージ**
 
 ## 担当
 **デザイン**
