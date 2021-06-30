@@ -1,5 +1,7 @@
 # Open-Campus-2021
 
+## 開発目標：7月15日に完成
+
 ## Build Setup
 
 ```bash
@@ -15,6 +17,9 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+# storybookの起動方法
+$ npx nuxt storybook
 ```
 ## ブランチを切る前に
 - 現在のブランチが`develop`ブランチであることを確認する
@@ -39,6 +44,24 @@ ex) `#2` なら　`issue/2`
 ### issueとのリンクを作る
 
 ex) `[add] #2 ファイルの追加`  
+
+## 開発の流れ
+- ①issueを立てる
+- 現在のブランチが`develop`ブランチであることを確認する
+- `develop`ブランチでプルする
+- ブランチの命名規則に従ってブランチを切る
+- ②開発する
+- 開発出来たらpullする
+- addする
+- commitの書き方に従ってcommitする
+- pushする
+
+### まだ開発途中なら
+- ②に戻る
+
+### 開発が終わったら
+- pull request を送る
+- ①に戻る
 
 ## 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
