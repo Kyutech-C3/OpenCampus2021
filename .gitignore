@@ -91,5 +91,3 @@ sw.*
 
 .nuxt-storybook
 storybook-static
-
-package-lock.json
