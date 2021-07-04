@@ -11,7 +11,7 @@
 			</div>
     </form>
 		<div>
-			<button class="comment-list-opener" @click="test">{{ is_open_icon }}</button>
+			<button class="comment-list-opener" @click="SwitchCommentList">{{ is_open_icon }}</button>
 			<comment v-if="is_open" :comment_list="comments"/>
 		</div>
   </div>
@@ -55,7 +55,7 @@ export default {
 		})
 	},
 	methods: {
-		test(){
+		SwitchCommentList(){
 			this.is_open = !this.is_open;
 			this.is_open_icon = this.is_open_icon_list[this.is_open ? 1 : 0];
 		},
@@ -77,7 +77,8 @@ export default {
 				console.error(err);
 			})
 			this.comment = ''
-
+			if(!this.is_open)
+				this.SwitchCommentList()
 		}
 	},
 }
