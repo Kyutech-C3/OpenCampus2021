@@ -4,6 +4,10 @@ export default { title: "Comment" };
 
 export const guestComment = () => ({
 	components: { Comment },
-  template: '<comment/>',
-  props: {}
+  template: '<comment :work_num="work_num" />',
+  props: {
+    work_num: {
+      default: 1
+    }
+  }
 });

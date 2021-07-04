@@ -19,10 +19,17 @@
 
 <script>
 import CommentCard from './_comment.vue'
+import axios from 'axios'
 
 export default {
 	components: {
 		comment: CommentCard,
+	},
+	props: {
+		work_num: {
+			type: Number,
+			require: true
+		}
 	},
 	data() {
 		return {
@@ -34,6 +41,19 @@ export default {
 			comments: []
 		}
 	},
+	mounted() {
+		this.$nextTick(function () {
+			console.log(this.work_num);
+			axios.get('https://shared-vps.compositecomputer.club/api/v1/works/' + String(this.work_num) + '/comments/')
+			.then((res) => {
+				this.comments = res.data;
+			})
+			.catch((err) => {
+				alert(err);
+				console.error(err);
+			})
+		})
+	},
 	methods: {
 		test(){
 			this.is_open = !this.is_open;
@@ -41,16 +61,21 @@ export default {
 		},
 		submitComment() {
 			console.log(this.author_name, this.comment);
-			this.comments = 
-			[
-				...this.comments,
-				{
-					id: this.comments.length,
-					author_name: this.author_name,
-					comment: this.comment,
-					created_at: "2021/07/03"
-				}
-			]
+			let payload = {
+				name: this.author_name,
+				text: this.comment
+			}
+			axios.post('https://shared-vps.compositecomputer.club/api/v1/works/' + String(this.work_num) + '/comments/', payload)
+			.then((res) => {
+				this.comments = [
+					...this.comments,
+					res.data,
+				];
+			})
+			.catch((err) => {
+				alert(err);
+				console.error(err);
+			})
 			this.comment = ''
 
 		}
