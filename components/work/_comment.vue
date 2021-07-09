@@ -1,14 +1,9 @@
 <template>
-	<div>
+	<div class="comment-wrapper">
 		<div v-for="comment_data in comment_list" v-bind:key="comment_data.id">
 			<div class="comment-component">
-				<div class="comment-info">
-					<h3 class="username-view">{{ comment_data.name }}</h3>
+					<p class="username-view">{{ comment_data.name }}</p>
 					<p class="comment-view">{{ comment_data.text }}</p>
-				</div>
-				<div class="comment-timeinfo">
-					<small>{{ getDate(comment_data.created_at) }}</small>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -34,12 +29,26 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.comment-wrapper {
+	margin-right: 10%;
+	margin-left: 5%;
+}
 .comment-component {
 	display: flex;
-	justify-content: space-between;
 	width: 100%;
+	margin-bottom: 13px;
 }
 .comment-info {
-	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.username-view {
+	width: calc(4vw + 40px);
+	padding-right: 15px;
+	border-right: 1px black solid;
+}
+.comment-view {
+	padding-left: 15px;
+	max-width: calc(65vw - 30px);
 }
 </style>

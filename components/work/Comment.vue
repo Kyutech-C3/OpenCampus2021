@@ -1,20 +1,20 @@
 <template>
-  <div class="comment">
-    <h3 class="title">コメント</h3>
-    <form class="comment-form-wrapper" @submit.prevent="submitComment">
-			<label>name</label>
-			<input name="author" type="text" class="username-form" v-model="author_name" />
-			<label>comment</label>
-			<div class="send">
+	<div class="comment">
+		<p class="title">◯コメントする</p>
+		<form class="comment-form-wrapper" @submit.prevent="submitComment">
+				<label>ニックネーム</label>
+				<input name="author" type="text" class="username-form" v-model="author_name" required />
+				<label>コメント</label>
 				<textarea name="comments" type="text" class="comment-form" required rows="4" v-model="comment"></textarea>
-				<input type="image" src="/send.png" height="20px" width="20px"/>
-			</div>
-    </form>
+				<input class="send-button" type="submit" height="20px" width="20px" value="✈送信"/>
+		</form>
+		<p class="title">◎コメント</p>
 		<div>
-			<button class="comment-list-opener" @click="SwitchCommentList">{{ is_open_icon }}</button>
+			<comment :comment_list="preview_comments"/>
 			<comment v-if="is_open" :comment_list="comments"/>
+			<button class="comment-list-opener" @click="SwitchCommentList">{{ is_open_icon }}</button>
 		</div>
-  </div>
+	</div>
 </template>
 
 <script>
@@ -36,9 +36,10 @@ export default {
 			author_name: "Guest",
 			comment: "",
 			is_open: false,
-			is_open_icon_list: ['∨', '∧'],
-			is_open_icon: '∨',
-			comments: []
+			is_open_icon_list: ['∨ もっと見る', '∧ 閉じる'],
+			is_open_icon: '∨ もっと見る',
+			comments: [],
+			preview_comments: []
 		}
 	},
 	mounted() {
@@ -47,6 +48,7 @@ export default {
 			axios.get('https://shared-vps.compositecomputer.club/api/v1/works/' + String(this.work_num) + '/comments/')
 			.then((res) => {
 				this.comments = res.data;
+				this.preview_comments = this.comments.splice(0, 2);
 			})
 			.catch((err) => {
 				alert(err);
@@ -88,40 +90,53 @@ export default {
 label{
 	display: block;
 }
+.title {
+	font-size: 20px;
+}
 .comment-form-wrapper {
+	margin-right: 10%;
+	margin-left: 5%;
 	margin-bottom: 20px;
 }
 .comment {
-  width: 80%;
-	max-width: 650px;
-  margin: auto;
+	width: 90%;
+	margin: auto;
 }
 .username-form {
 	width: 40%;
 	margin-bottom: 10px;
-  height: 80%;
-  border: none;
-  outline: none;
-	border-bottom: 1px solid #c2c2c2;
-}
-.send {
-	display: flex;
-	align-items: flex-end;
+	height: 25px;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	background-color: #EEE;
+	border-radius: 3px;
 }
 .comment-form {
+	padding: 5px;
+	font-size: 14px;
 	resize: none;
 	overflow: hidden;
-  width: 95%;
-  border: none;
-  outline: none;
-	border-bottom: 1px solid #c2c2c2;
+	width: 100%;
+	border: none;
+	outline: none;
 	margin-right: 10px;
+	background-color: #EEE;
+	border-radius: 3px;
 }
 .comment-list-opener{
 	width: 100%;
 	border-radius: 3px;
-	border: 1px #c2c2c2 solid;
+	border: 0px #c2c2c2 solid;
 	background-color: #0000;
 	font-weight: bold;
+}
+.send-button{
+	font-size: 15px;
+	margin: 10px 0;
+	padding: 2px 35px;
+	border-radius: 4px;
+	background-color: #0000;
+	border: 2px #777 solid;
 }
 </style>
