@@ -30,9 +30,34 @@
       },
       "tags": [
         {
-          "id": 0,
-          "name": "string",
-          "color": "string"
+          "id": 1,
+          "name": "hack",
+          "color": "#222"
+        },
+        {
+          "id": 2,
+          "name": "game",
+          "color": "#122"
+        },
+        {
+          "id": 3,
+          "name": "cg",
+          "color": "#212"
+        },
+        {
+          "id": 4,
+          "name": "media_art",
+          "color": "#221"
+        },
+        {
+          "id": 5,
+          "name": "nuxt",
+          "color": "#211"
+        },
+        {
+          "id": 6,
+          "name": "vue",
+          "color": "#154"
         }
       ]
     },
@@ -67,9 +92,9 @@
         },
         "tags": [
           {
-            "id": 0,
-            "name": "string",
-            "color": "string"
+            "id": 2,
+            "name": "sdg",
+            "color": "#333"
           }
         ]
       },
@@ -104,9 +129,9 @@
         },
         "tags": [
           {
-            "id": 0,
-            "name": "string",
-            "color": "string"
+            "id": 4,
+            "name": "dsahfg",
+            "color": "#444"
           }
         ]
       },
@@ -142,8 +167,8 @@
         "tags": [
           {
             "id": 0,
-            "name": "string",
-            "color": "string"
+            "name": "gda",
+            "color": "#555"
           }
         ]
       },
@@ -179,8 +204,8 @@
         "tags": [
           {
             "id": 0,
-            "name": "string",
-            "color": "string"
+            "name": "ahf",
+            "color": "#514"
           }
         ]
       },
@@ -216,8 +241,8 @@
         "tags": [
           {
             "id": 0,
-            "name": "string",
-            "color": "string"
+            "name": "affa",
+            "color": "#123"
           }
         ]
       },
@@ -253,8 +278,8 @@
         "tags": [
           {
             "id": 0,
-            "name": "string",
-            "color": "string"
+            "name": "ah",
+            "color": "#774"
           }
         ]
       }

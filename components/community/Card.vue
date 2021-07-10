@@ -1,17 +1,24 @@
 <template>
-  <nuxt-link to="{name: 'works-id', params: {id: is}}" class="card-link">
+  <nuxt-link to="{name: 'works-id', params: {id: key}}" class="card-link">
     <article class="card">
       <img src="../../assets/smple_img.png" alt="thumbnail" title="thumbnail" class="thumbnail"/>
       <div class="content">
           <div class="title">{{title}}</div>
+          <div class="tag">
+            <Tag 
+            v-for="tag in tags"
+            :tag="tag"
+            :key="tag.id"
+            />
+          </div>
           <div class="description">{{description}}</div>
       </div>
     </article>
   </nuxt-link>
-
 </template>
 
 <script>
+import Tag from "../Tag.vue"
 export default {
   props: {
     title: {
@@ -41,6 +48,9 @@ export default {
       type: Number,
       require:true,
     }
+  },
+  components: {
+    Tag,
   }
 }
 </script>
@@ -61,24 +71,31 @@ color: #000000 ;
 .content {
   position: relative;
   width: 200px;
-  height: 130px;
-  padding-left: 7px;
-  padding-right: 7px;
+  height: 160px;
+  padding-left: 10px;
+  padding-right: 10px;
   overflow: hidden;
 }
 .thumbnail {
   position: relative;
   width: 200px;
-  height: 150px;
+  height: 120px;
   object-fit: cover;
 }
 .title {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-right: 3px;
 }
 .description {
   position: relative;
   word-break: break-all;
-  font-size: 14px;
+  font-size: 12px;
+  margin-top: 10px;
 }
 </style>
