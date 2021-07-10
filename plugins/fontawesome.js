@@ -7,13 +7,15 @@ import {
 	faTimes, 
 	faSearch, 
 	faComments, 
-	faPaperPlane 
+	faPaperPlane,
+    faHeart as faSolidHeart,
 } from '@fortawesome/free-solid-svg-icons'
 import { 
-	faYoutube 
+	faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 import { 
-	faCommentDots 
+	faCommentDots,
+    faHeart,
 } from '@fortawesome/free-regular-svg-icons'
 
 config.autoAddCss = false
@@ -25,9 +27,10 @@ library.add(
 	faYoutube, 
 	faCommentDots, 
 	faComments, 
-	faPaperPlane
-	)
-
+	faPaperPlane,
+    faHeart,
+    faSolidHeart,
+)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
@@ -37,4 +40,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
  * 
  * <!-- brandsの場合 -->
  * <font-awesome-icon :icon="['fab', 'youtube']" />
+ * <!-- regularの場合 -->
+ * <font-awesome-icon :icon="['far', 'youtube']" />
  */
