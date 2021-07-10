@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="tag"
-		:style="style"
+		:style="small ? smallStyle : style"
 		:class="{selected, deletable, small}"
 	>
 		<div>
@@ -46,6 +46,9 @@ export default {
 	computed: {
 		style() {
 			return `background-color: ${this.tag.color};`
+		},
+		smallStyle() {
+			return `color: ${this.tag.color}; border: solid 1.5px ${this.tag.color}`
 		}
 	},
 }
