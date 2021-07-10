@@ -8,6 +8,8 @@
       :tags="card_item.tags"
       :description="card_item.description"
       :card_image="card_item.card_image"
+      :work_id="card_item.id"
+      :genre_id="card_item.genre.title"
       :key="card_item.id"
     />
   </div>

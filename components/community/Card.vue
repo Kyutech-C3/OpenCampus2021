@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="{name: 'works-id', params: {id: key}}" class="card-link">
+  <nuxt-link :to="workPath" class="card-link">
     <article class="card">
       <img src="../../assets/smple_img.png" alt="thumbnail" title="thumbnail" class="thumbnail"/>
       <div class="content">
@@ -44,13 +44,26 @@ export default {
       required: true,
       default: "enpty"
     },
-    key: {
+    work_id: {
       type: Number,
       require:true,
+    },
+    genre_id: {
+      type: String,
+      require: true,
+    },
+    key: {
+      type: Number,
+      require: true,
     }
   },
   components: {
     Tag,
+  },
+  computed: {
+    workPath () {
+      return `/works/${this.work_id}`
+    }
   }
 }
 </script>
@@ -72,8 +85,7 @@ color: #000000 ;
   position: relative;
   width: 200px;
   height: 160px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px 15px 10px 15px;
   overflow: hidden;
 }
 .thumbnail {
@@ -85,6 +97,7 @@ color: #000000 ;
 .title {
   font-size: 18px;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 .tag {
   display: flex;
