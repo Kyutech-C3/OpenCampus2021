@@ -7,13 +7,13 @@
         /></a>
       </li>
       <div class="linkBox">
-        <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw"
-          ><img id="youtube" src="../static/Footer/iconYouTube.png" alt="youtube"
-        /></a>
-        <a href="https://twitter.com/c3_kyutech?s=20"
-          ><img id="twitter" src="../static/Footer/iconTwitter.png" alt="twitter"
-        /></a>
-        <a class="note" href="https://note.com/c3noteproject">note</a>
+        <a class="linkItem" href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw">
+					<font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
+				</a>
+        <a class="linkItem" href="https://twitter.com/c3_kyutech?s=20">
+					<font-awesome-icon class="icon" :icon="['fab', 'twitter']" />
+        </a>
+        <a class="note linkItem" href="https://note.com/c3noteproject">note</a>
       </div>
       <li>
         <a
@@ -21,7 +21,7 @@
           href="https://c3-open-campus-2021.netlify.app/"
           target="_blank"
         >
-          C3 Official Website<img src="../static/Footer/iconLink.png" />
+          C3 Official Website<font-awesome-icon class="link-icon" icon="external-link-alt" />
         </a>
         <br />
         <a
@@ -29,13 +29,13 @@
           href="https://www.iizuka.kyutech.ac.jp/"
           target="_blank"
         >
-          情報工学部<img src="../static/Footer/iconLink.png" />
+          情報工学部<font-awesome-icon class="link-icon" icon="external-link-alt" />
         </a>
       </li>
     </ul>
     <div class="returnTopBox">
       <button id="returnTop" v-show="buttonActive" @click="returnTop">
-        <img id="up" src="../static/Footer/iconUp.png" /><br />PAGE TOP
+        <font-awesome-icon id="up" icon="angle-up" /><br />PAGE TOP
       </button>
     </div>
     <div class="copyRight">© 2021 C3</div>
@@ -69,7 +69,13 @@ button:hover {
 }
 a.note {
   color: white;
-  text-decoration: none;
+	text-decoration: none;
+	/*margin: auto 8px;*/
+	font-size: 18px;
+}
+.icon {
+	color: white;
+	font-size: 30px;
 }
 #youtube {
   height: 20px;
@@ -78,6 +84,10 @@ a.note {
 #twitter {
   height: 25px;
   width: 30px;
+}
+#up {
+	font-size: 25px;
+	margin-bottom: 5px;
 }
 /* PC/タブレット横 */
 @media screen and (min-width: 768px) {
@@ -107,15 +117,9 @@ a.note {
     flex-direction: row;
     justify-content: baseline;
   }
-  .link img {
-    height: 13px;
-    width: 13px;
+  .link-icon {
+    font-size: 13px;
     margin-left: 5px;
-  }
-  #up {
-    height: 20px;
-    width: 30px;
-    margin-bottom: 5px;
   }
   #returnTop {
     border-radius: 20px/20px;
@@ -148,7 +152,7 @@ a.note {
     color: white;
     text-decoration: none;
     font-size: 80%;
-    margin: 10px 5% 0 0;
+    /*margin: 10px 5% 0 0;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,24 +176,18 @@ a.note {
     display: flex;
     justify-content: center;
   }
+	.linkItem {
+		flex-basis: 50px;
+	}
   #youtube {
     margin: 10px;
   }
   #twitter {
     margin: 10px;
   }
-  .note {
-    margin: 10px;
-  }
-  .link img {
-    height: 10px;
-    width: 10px;
+  .link-icon {
+    font-size: 10px;
     margin-left: 5px;
-  }
-  #up {
-    height: 10px;
-    width: 15px;
-    margin-bottom: 5px;
   }
   button {
     font-size: 20%;
