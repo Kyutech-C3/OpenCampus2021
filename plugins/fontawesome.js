@@ -11,7 +11,7 @@ import {
 	faHeart as faSolidHeart,
 	faExternalLinkAlt,
 	faAngleUp,
-    faFileDownload
+	faFileDownload
 } from '@fortawesome/free-solid-svg-icons'
 import {
 	faYoutube,
@@ -37,7 +37,7 @@ library.add(
 	faTwitter,
 	faExternalLinkAlt,
 	faAngleUp,
-    faFileDownload
+	faFileDownload
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
