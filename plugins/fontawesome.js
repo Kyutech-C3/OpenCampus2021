@@ -1,10 +1,24 @@
 import Vue from 'vue'
 import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+
+// 1. 利用したいアイコンを以下にてimportする
+import { faTimes, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faYoutube } from '@fortawesome/free-brands-svg-icons'
+import {  } from '@fortawesome/free-regular-svg-icons'
 
 config.autoAddCss = false
 
-library.add(fas)
+// 2. 利用したいアイコンを以下にてlibrary.addする
+library.add(faTimes, faSearch, faYoutube)
+
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+/**
+ * <!-- 利用 -->
+ * <font-awesome-icon icon="times" />
+ * 
+ * <!-- brandsの場合 -->
+ * <font-awesome-icon :icon="['fab', 'youtube']" />
+ */
