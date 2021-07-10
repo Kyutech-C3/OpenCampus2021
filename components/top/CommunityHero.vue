@@ -33,9 +33,12 @@ export default {
 </script>
 
 <style scoped>
-.community-hero {
+.community-hero,
+.name {
   background-image: var(--bgUrl);
   background-size: cover;
+}
+.community-hero {
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -46,6 +49,12 @@ export default {
   padding: 40px;
   height: 100vh;
 }
+@media screen and (max-width: 767px) {
+  .community-hero {
+    padding: 20px;
+  }
+}
+
 .community-hero:before {
   content: "";
   background: inherit;
@@ -61,6 +70,7 @@ export default {
   bottom: -5px;
   z-index: -1;
 }
+
 .name,
 .description,
 .button-wrapper {
@@ -68,6 +78,8 @@ export default {
 }
 
 .name {
+  font-size: 12vw;
+  color: rgba(0, 0, 0, 0);
   padding-top: 60px;
   padding-left: 100px;
   position: absolute;
@@ -77,20 +89,30 @@ export default {
   height: 100%;
   background-position-x: -3px;
   background-position-y: -3px;
-  font-size: 12vw;
-  background-image: var(--bgUrl);
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgba(0, 0, 0, 0);
-  filter: brightness(300%);
-  background-size: cover;
+  filter: brightness(200%);
 }
+@media screen and (max-width: 767px) {
+  .name {
+    font-size: 15vw;
+    padding-left: 20px;
+  }
+}
+
 .description {
   font-size: 2vw;
   margin: 20% 10% 0 30%;
   letter-spacing: 4px;
   line-height: 1.3em;
 }
+@media screen and (max-width: 767px) {
+  .description {
+    font-size: 20px;
+    margin: 50% 20px 0 20px;
+  }
+}
+
 .button-wrapper {
   border: 2px solid white;
   border-radius: 40px;
@@ -99,9 +121,20 @@ export default {
   margin: 50px auto;
   width: fit-content;
 }
+@media screen and (max-width: 767px) {
+  .button-wrapper {
+    padding: 10px 30px;
+  }
+}
+
 .button-text {
   text-align: center;
   font-size: 35px;
   letter-spacing: 0.3em;
+}
+@media screen and (max-width: 767px) {
+  .button-text {
+    font-size: 20px;
+  }
 }
 </style>
