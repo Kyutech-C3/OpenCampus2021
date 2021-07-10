@@ -1,14 +1,14 @@
 <template>
 	<div class="comment">
-		<p class="title">◯コメントする</p>
+		<p class="title"><font-awesome-icon class="icon" :icon="['far', 'comment-dots']" />コメントする</p>
 		<form class="comment-form-wrapper" @submit.prevent="submitComment">
 				<label>ニックネーム</label>
 				<input name="author" type="text" class="username-form" v-model="author_name" required />
 				<label>コメント</label>
 				<textarea name="comments" type="text" class="comment-form" required rows="4" v-model="comment"></textarea>
-				<input class="send-button" type="submit" height="20px" width="20px" value="✈送信"/>
+				<button class="send-button" type="submit"><font-awesome-icon class="icon" icon="paper-plane"/>送信</button>
 		</form>
-		<p class="title">◎コメント</p>
+		<p class="title"><font-awesome-icon class="icon" icon="comments"/>コメント</p>
 		<div>
 			<comment :comment_list="preview_comments"/>
 			<comment v-if="is_open" :comment_list="comments"/>
@@ -87,6 +87,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.icon {
+	margin-right: 7px; 
+}
 label{
 	display: block;
 }
@@ -134,8 +137,8 @@ label{
 .send-button{
 	font-size: 15px;
 	margin: 10px 0;
-	padding: 2px 35px;
-	border-radius: 4px;
+	padding: 3px 35px;
+	border-radius: 6px;
 	background-color: #0000;
 	border: 2px #777 solid;
 }
