@@ -1,18 +1,24 @@
 <template>
-	<div class="tag-list-container">
-		<div v-for="(tag) in tags" :key="tag.name" class="tag-container">
-			<tag
-				:tag="tag"
-				:selectable="true"
-				:selected="getSelected(tag)"
-				@select="handleSelect(tag)"
-				@unSelect="handleUnSelect(tag)"
-			/>
+	<div class="tag-selector-container">
+		<div class="tag-selector-header">
+			<font-awesome-icon icon="search" />
+			タグで探す
+			<v-select class="tag-select" :options="options" :value="[]" @option:selected="handleSelect" />
+		</div>
+		<div class="tag-list-container">
+			<div v-for="tag in selectedTags" :key="tag.name" class="tag-container">
+				<tag
+					:tag="tag"
+					:deletable="true"
+					@delete="handleUnSelect"
+				/>
+			</div>
 		</div>
 	</div>
 </template>
 <script>
 import Tag from '../Tag.vue'
+import VSelect from 'vue-select'
 /**
  * type Tag = {
  * 	id: number
@@ -27,7 +33,8 @@ export default {
 		event: 'selectTags'
 	},
 	components: {
-		Tag
+		Tag,
+		VSelect
 	},
 	props: {
 		tags: {
@@ -45,16 +52,30 @@ export default {
 			default: () => ([])
 		}
 	},
+	computed: {
+		options() {
+			return this.tags.map(t => ({
+				label: t.name,
+				value: t
+			}))
+		},
+		unSelectedTags() {
+			const selectedTagIDs = this.selectedTags.map(t => t.id)
+			return this.tags.filter(t => (!(t.id in selectedTagIDs)))
+		},
+	},
 	methods: {
-		handleSelect(tag) {
+		handleSelect(option) {
+			const tag = option.value
 			if( !this.selectedTags.find(t => t.id === tag.id) )
 				this.$emit('selectTags', [...this.selectedTags, tag])
 		},
 		handleUnSelect(tag) {
 			const tagIdx = this.selectedTags.findIndex(t => t.id === tag.id)
 			if (tagIdx !== -1) {
-				this.selectedTags.splice(tagIdx, 1)
-				this.$emit('selectTags', this.selectedTags)
+				const temp = this.selectedTags.concat()
+				temp.splice(tagIdx, 1)
+				this.$emit('selectTags', temp)
 			}
 		},
 		getSelected(tag) {
@@ -64,9 +85,22 @@ export default {
 }
 </script>
 <style scoped>
+.tag-selector-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.tag-selector-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
 .tag-list-container {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .tag-container:last-child {
@@ -74,6 +108,10 @@ export default {
 }
 
 .tag-container {
-	margin-right: 10px;
+	margin-right: .8rem;
+}
+
+.tag-select {
+	margin-left: .5rem;
 }
 </style>
