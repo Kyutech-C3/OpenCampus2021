@@ -120,6 +120,7 @@ export default {
   text-decoration: none;
   margin: 50px auto;
   width: fit-content;
+  z-index: 10;
 }
 @media screen and (max-width: 767px) {
   .button-wrapper {
