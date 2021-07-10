@@ -8,7 +8,7 @@ const items = [
     description:
       "ゲーム開発（ゲームかいはつ、英: Game development）とは、ゲームの開発までの制作過程のことをいう。",
     imgUrl:
-      "https://asset.watch.impress.co.jp/img/wf/docs/1120/535/image1_s.jpg",
+      "https://unity3d.com/profiles/unity3d/themes/unity/images/unity/beta/alpha-beta/2020.2b-improvements.jpg",
     linkUrl: ""
   },
   {
@@ -31,7 +31,8 @@ const items = [
     name: "MEDIA ART",
     description:
       "ニューメディアアート、メディアアート（New media art, media art）は、20世紀中盤より広く知られるようになった、芸術表現に新しい技術的発明を利用する、もしくは新たな技術的発明によって生み出される芸術の総称的な用語である。",
-    imgUrl: "https://livedoor.blogimg.jp/zunx2_dayo919/imgs/5/c/5c412346.png",
+    imgUrl:
+      "https://i0.wp.com/necojita.com/wordpress/wp-content/uploads/2017/11/Image-2017-11-13-9-40.jpeg?resize=1276%2C718",
     linkUrl: ""
   }
 ];
