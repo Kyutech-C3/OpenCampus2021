@@ -49,6 +49,6 @@ export default {
 }
 .comment-view {
 	padding-left: 15px;
-	max-width: calc(65vw - 30px);
+	max-width: calc(60vw - 30px);
 }
 </style>

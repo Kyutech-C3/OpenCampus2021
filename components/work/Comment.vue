@@ -12,7 +12,7 @@
 		<div>
 			<comment :comment_list="preview_comments"/>
 			<comment v-if="is_open" :comment_list="comments"/>
-			<button class="comment-list-opener" @click="SwitchCommentList">{{ is_open_icon }}</button>
+			<button v-if="comments.length > 0" class="comment-list-opener" @click="SwitchCommentList">{{ is_open_icon }}</button>
 		</div>
 	</div>
 </template>
