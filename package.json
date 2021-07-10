@@ -17,6 +17,7 @@
     "@babel/runtime-corejs3": "^7.14.7",
     "@nuxtjs/storybook": "^4.0.4",
     "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-knobs": "^6.3.0",
     "core-js": "^3.15.2"
   }
 }
