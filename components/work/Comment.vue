@@ -19,7 +19,6 @@
 
 <script>
 import CommentCard from './_comment.vue'
-import axios from 'axios'
 
 export default {
 	components: {
@@ -45,8 +44,9 @@ export default {
 	mounted() {
 		this.$nextTick(function () {
 			console.log(this.work_num);
-			axios.get('https://shared-vps.compositecomputer.club/api/v1/works/' + String(this.work_num) + '/comments/')
+			this.$axios.get('works/' + String(this.work_num) + '/comments/')
 			.then((res) => {
+				console.log(res)
 				this.comments = res.data;
 				this.preview_comments = this.comments.splice(0, 2);
 			})
@@ -67,7 +67,7 @@ export default {
 				name: this.author_name,
 				text: this.comment
 			}
-			axios.post('https://shared-vps.compositecomputer.club/api/v1/works/' + String(this.work_num) + '/comments/', payload)
+			this.$axios.post('/works/' + String(this.work_num) + '/comments/', payload)
 			.then((res) => {
 				this.comments = [
 					...this.comments,
