@@ -2,7 +2,8 @@
 	<div class="tag-selector-container">
 		<div class="tag-selector-header">
 			<font-awesome-icon icon="search" />
-			タグで探す
+			<div class="label">タグで探す</div>
+			<TagButton class="all-select-button" name="All" color="#808080" small @click="selectAllTags" />
 			<v-select class="tag-select" :options="options" :value="[]" @option:selected="handleSelect" />
 		</div>
 		<div class="tag-list-container">
@@ -17,7 +18,7 @@
 	</div>
 </template>
 <script>
-import Tag from '../Tag.vue'
+import TagButton from './TagButton'
 import VSelect from 'vue-select'
 /**
  * type Tag = {
@@ -33,7 +34,7 @@ export default {
 		event: 'selectTags'
 	},
 	components: {
-		Tag,
+		TagButton,
 		VSelect
 	},
 	props: {
@@ -63,6 +64,9 @@ export default {
 			const selectedTagIDs = this.selectedTags.map(t => t.id)
 			return this.tags.filter(t => (!(t.id in selectedTagIDs)))
 		},
+		hasAllTagSelected() {
+			return this.tags.length === this.selectedTags.length
+		}
 	},
 	methods: {
 		handleSelect(option) {
@@ -80,6 +84,12 @@ export default {
 		},
 		getSelected(tag) {
 			return this.selectedTags.find((t) => (tag.id === t.id)) !== undefined
+		},
+		selectAllTags() {
+			if(this.hasAllTagSelected)
+				this.$emit('selectTags', [])
+			else
+				this.$emit('selectTags', this.tags)
 		}
 	}
 }
@@ -95,6 +105,14 @@ export default {
 	flex-direction: row;
 	align-items: center;
 	margin-bottom: 1rem;
+}
+
+.label {
+	margin-left: .5rem;
+}
+
+.all-select-button {
+	margin-left: .5rem;
 }
 
 .tag-list-container {
