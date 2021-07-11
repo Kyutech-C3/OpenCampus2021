@@ -10,7 +10,8 @@ import {
 	faPaperPlane,
 	faHeart as faSolidHeart,
 	faExternalLinkAlt,
-	faAngleUp
+	faAngleUp,
+	faFileDownload
 } from '@fortawesome/free-solid-svg-icons'
 import {
 	faYoutube,
@@ -18,7 +19,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import {
 	faCommentDots,
-	faHeart,
+	faHeart
 } from '@fortawesome/free-regular-svg-icons'
 
 config.autoAddCss = false
@@ -35,7 +36,8 @@ library.add(
 	faSolidHeart,
 	faTwitter,
 	faExternalLinkAlt,
-	faAngleUp
+	faAngleUp,
+	faFileDownload
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
