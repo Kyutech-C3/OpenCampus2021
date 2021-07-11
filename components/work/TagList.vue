@@ -1,7 +1,7 @@
 <template>
 	<div class="tag-list-container">
 		<div v-for="tag in tags" :key="tag.name" class="tag-container">
-			<tag :tag="tag" :selectable="false" />
+			<tag :tag="tag" :selectable="false" small />
 		</div>
 	</div>
 </template>

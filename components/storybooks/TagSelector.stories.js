@@ -19,8 +19,8 @@ const sampleTags = [
   },
   {
     id: 4,
-    name: 'Next.js',
-    color: '#00FF00'
+    name: 'Gatsby.js',
+    color: '#40F100'
   },
 ]
 

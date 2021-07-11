@@ -18,6 +18,7 @@ export default {
     // Global CSS: https://go.nuxtjs.dev/config-css
     css: [
         '@fortawesome/fontawesome-svg-core/styles.css',
+        'vue-select/dist/vue-select.css'
     ],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -25,34 +26,35 @@ export default {
         '~/plugins/fontawesome.js'
     ],
 
-    // Auto import components: https://go.nuxtjs.dev/config-components
-    components: true,
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
 
-    // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-    buildModules: [
-        // '@nuxtjs/fontawesome'
-    ],
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  buildModules: [
+    '@nuxtjs/fontawesome'
+  ],
 
-    // Modules: https://go.nuxtjs.dev/config-modules
-    modules: [
-        '@nuxtjs/axios'
-    ],
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    '@nuxtjs/axios'
+  ],
 
-    axios: {
-        baseURL: 'https://shared-vps.compositecomputer.club/api/v1/'
-    },
+  axios: {
+    baseURL: 'https://shared-vps.compositecomputer.club/api/v1/'
+  },
 
-    // Build Configuration: https://go.nuxtjs.dev/config-build
-    build: {},
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {
+  },
 
-    storybook: {
-        addons: [
-            '@storybook/addon-actions/register',
-            '@storybook/addon-backgrounds/register',
-            '@storybook/addon-controls/register',
-            '@storybook/addon-docs/register',
-            '@storybook/addon-toolbars/register',
-            '@storybook/addon-viewport/register',
+  storybook: {
+    addons: [
+      '@storybook/addon-actions/register',
+      '@storybook/addon-backgrounds/register',
+      '@storybook/addon-controls/register',
+      '@storybook/addon-docs/register',
+      '@storybook/addon-toolbars/register',
+      '@storybook/addon-viewport/register',
         ],
     },
 }

@@ -1,11 +1,18 @@
 <template>
 	<div
 		class="tag"
-		:style="style"
-		:class="(selected ? 'selected ' : '') + (selectable ? 'selectable' : '')"
-		@click="handleClick"
+		:style="small ? smallStyle : style"
+		:class="{selected, deletable, small}"
 	>
-		{{ tag.name }}
+		<div>
+			{{ tag.name }}
+		</div>
+		<font-awesome-icon
+			icon="times"
+			v-if="deletable"
+			class="delete-button"
+			@click="$emit('delete', tag)"
+		/>
 	</div>
 </template>
 <script>
@@ -25,12 +32,12 @@ export default {
 				color: '#FF0000'
 			})
 		},
-		selectable: {
+		deletable: {
 			type: Boolean,
 			require: false,
 			default: () => (false)
 		},
-		selected: {
+		small: {
 			type: Boolean,
 			require: false,
 			default: () => (false)
@@ -39,26 +46,32 @@ export default {
 	computed: {
 		style() {
 			return `background-color: ${this.tag.color};`
+		},
+		smallStyle() {
+			return `color: ${this.tag.color}; border: solid 1.5px ${this.tag.color}`
 		}
 	},
-	methods: {
-		handleClick() {
-			if(this.selected) this.$emit('unSelect')
-			else this.$emit('select')
-		}
-	}
 }
 </script>
 <style scoped>
 .tag {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	padding: 5px 10px;
-	font-size: 16px;
+	font-size: 1rem;
+	color: #ffffff;
 	border-radius: 15.5px;
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 3px 5px;
 }
-.selectable {
+.small {
+	font-size: 12px;
+}
+.delete-button {
+	vertical-align: middle;
+	margin-left: 8px;
+	font-size: 12px;
 	cursor: pointer;
-	opacity: 0.5;
 }
 .selected {
 	opacity: 1;
