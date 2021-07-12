@@ -1,7 +1,7 @@
 <template>
   <dev>
     <a
-      href="https://drive.google.com/uc?export=download&id=122bfV2gtg6bfwYkmAQfrws4-6vFZbqII"
+      :href="download_link"
       target="_blank"
       class="download_link"
       ><font-awesome-icon :icon="['fas', 'file-download']"
@@ -12,30 +12,11 @@
 <script>
 export default {
   props: {
-    work_id: {
-      type: Number,
+    download_link: {
+      type: String,
       require: true,
+      default: "https://drive.google.com/uc?export=download&id=122bfV2gtg6bfwYkmAQfrws4-6vFZbqII"
     },
-  },
-  data() {
-    return {
-      download_link: "",
-    };
-  },
-  mounted() {
-    this.$nextTick(function () {
-      console.log(this.work_id);
-      this.$axios
-        .get("works/" + String(this.work_id))
-        .then((res) => {
-          console.log(res);
-          this.download_link = res.data.download_link;
-        })
-        .catch((err) => {
-          alert(err);
-          console.error(err);
-        });
-    });
   },
 };
 </script>
