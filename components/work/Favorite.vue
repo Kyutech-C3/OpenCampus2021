@@ -13,11 +13,11 @@ export default {
   props: {
     work_id: {
       type: Number,
-      require: true,
+      require: true
     },
     goods: {
       type: Number,
-      require: true,
+      require: true
     }
   },
   data () {
