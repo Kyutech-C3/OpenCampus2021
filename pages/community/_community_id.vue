@@ -1,26 +1,29 @@
 <template>
-  <div>
-    <!--<Header />-->
-    <div>
-      <h1>{{ genre.title }} Community</h1>
+  <div class="container">
+    <div class="row">
+      <description :info="communityInfo" />
     </div>
-    <!-- <card-list :card_items="genre.works" /> -->
-    <tag-selector :tags="allTags" v-model="selectedTags" />
-
-    <card-list :card_items="tagFilteredWorks" />
+    <div class="row">
+      <tag-selector :tags="allTags" v-model="selectedTags" />
+    </div>
+    <div class="row">
+      <card-list :card_items="tagFilteredWorks" />
+    </div>
   </div>
 </template>
 
 <script>
 import TagSelector from '../../components/work/TagSelector.vue';
 import CardList from "../../components/community/CardList.vue";
+import Description from '../../components/community/Description.vue';
 //import Header from "../../components/Header.vue"
 //import card_items from "../../assets/posts.json";
 
 export default {
   components: {
     TagSelector,
-    CardList
+    CardList,
+    Description
     // Header
   },
   data() {
@@ -31,6 +34,12 @@ export default {
     };
   },
   computed: {
+    communityInfo() {
+      return {
+        name: `${this.genre.title} community`,
+        description: this.genre.description
+      }
+    },
     allTags() {
       let tags = []
       this.genre.works.forEach((work) => {
@@ -68,3 +77,15 @@ export default {
   }
 };
 </script>
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5rem;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+</style>
