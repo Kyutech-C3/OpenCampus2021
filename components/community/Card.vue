@@ -2,9 +2,6 @@
   <nuxt-link :to="workPath" class="card-link">
     <article class="card">
       <img src="../../assets/smple_img.png" alt="thumbnail" title="thumbnail" class="thumbnail"/>
-      <div class="tag_viewer" v-if="isHoverFlag">
-        <tag-list :tags="tags" />
-      </div>
       <div class="tag_viewer1" v-if="isHoverFlag">
       </div>
       <div class="content">
@@ -27,7 +24,6 @@
 
 <script>
 import Tag from "../Tag.vue"
-import TagList from "../work/TagList.vue"
 export default {
   data() {
     return {
@@ -74,7 +70,6 @@ export default {
   },
   components: {
     Tag,
-    TagList
   },
   computed: {
     workPath () {
@@ -110,19 +105,6 @@ export default {
   height: 120px;
   object-fit: cover;
 }
-.tag_viewer {
-  position: absolute;
-  margin-top: -120px;
-  margin-left: 5px;
-  padding: 10px;
-  width: 190px;
-  height: 150px;
-  background-color: rgba(240, 240, 240, 0.89);
-  border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.486);
-  z-index: 100;
-  overflow: hidden;
-}
 .title {
   font-size: 18px;
   margin-bottom: 5px;
@@ -130,6 +112,20 @@ export default {
 }
 .tag_wrap {
   overflow: hidden;
+  overflow-x: scroll;
+  cursor: default;
+}
+.tag_wrap::-webkit-scrollbar {
+  height: 7px;
+}
+
+.tag_wrap::-webkit-scrollbar-thumb {
+  background: rgb(219, 219, 219);
+  border-radius: 3px;
+}
+
+.tag_wrap::-webkit-scrollbar-track {
+  background: rgba(221, 221, 221, 0.5);
 }
 .tag {
   display: flex;
@@ -137,11 +133,13 @@ export default {
   justify-content: flex-start;
   height: 30px;
   margin-right: 3px;
+  margin-bottom: 4px;
+  
 }
 .description {
   position: relative;
   word-break: break-all;
   font-size: 12px;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 </style>
