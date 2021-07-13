@@ -34,19 +34,17 @@ export default {
     allTags() {
       let tags = []
       this.genre.works.forEach((work) => {
-        tags = tags.concat(work.tags.filter(t => !tags.includes(t)))
+        tags = tags.concat(work.tags.filter(tag => !tags.filter(t => t.id === tag.id).length))
       })
       return tags
     },
     tagFilteredWorks() {
       // console.debug(this.genre.works, this.selectedTags)
-      console.debug('all works')
       if(this.selectedTags.length === 0) {
-        console.debug(this.genre.works)
         return this.genre.works
       } else {
         return this.genre.works.filter(work => (
-          !!this.selectedTags.filter(t => work.tags.includes(t)).length
+          !!this.selectedTags.filter(tag => !!work.tags.filter(t => tag.id === t.id).length).length
         ))
       }
     }
