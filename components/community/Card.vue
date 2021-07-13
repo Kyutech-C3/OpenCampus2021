@@ -9,10 +9,11 @@
           <div class="tag_wrap">
             <div class="tag" @mouseover="isHoverFlag = true" @mouseleave="isHoverFlag = false">
               <Tag 
-              v-for="tag in tags"
-              :small="style"
-              :tag="tag"
-              :key="tag.id"
+                v-for="tag in tags"
+                extraSmall
+                outline
+                :tag="tag"
+                :key="tag.id"
               />
             </div>
           </div>
@@ -125,13 +126,12 @@ export default {
 }
 
 .tag_wrap::-webkit-scrollbar-track {
-  background: rgba(221, 221, 221, 0.5);
+  background: rgba(221, 221, 221, 0.219);
 }
 .tag {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  height: 30px;
   margin-right: 3px;
   margin-bottom: 4px;
   
