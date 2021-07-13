@@ -36,8 +36,10 @@ export default {
 .tag-list-container {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 .tag-container {
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 </style>
