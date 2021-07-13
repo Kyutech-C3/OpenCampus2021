@@ -30,25 +30,23 @@ export default {
 
 <style lang="css" scoped>
 .comment-wrapper {
-	margin-right: 10%;
-	margin-left: 5%;
+	margin-left: 7%;
 }
 .comment-component {
 	display: flex;
 	width: 100%;
 	margin-bottom: 13px;
 }
-.comment-info {
-	display: flex;
-	flex-direction: column;
-}
 .username-view {
-	width: calc(4vw + 40px);
+	flex-basis: 15%;
+	flex-shrink: 0;
 	padding-right: 15px;
 	border-right: 1px black solid;
+	word-break: break-all;
 }
 .comment-view {
 	padding-left: 15px;
-	max-width: calc(60vw - 30px);
+	flex-basis: auto;
+	/* width: calc(75vw - 25px); */
 }
 </style>
