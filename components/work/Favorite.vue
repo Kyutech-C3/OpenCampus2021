@@ -13,11 +13,11 @@ export default {
   props: {
     work_id: {
       type: Number,
-      require: true,
+      require: true
     },
     goods: {
       type: Number,
-      require: true,
+      require: true
     }
   },
   data () {
@@ -48,19 +48,19 @@ export default {
   },
   methods: {
     submitFavo() {
-      // console.log(this.likedFlag);
-      // let payload = {
-      //   goods: 1
-      // }
-      // this.$axios.post('works/' + String(this.work_id) + '/goods/', payload)
-      // .then((res) => {
-      //   this.likeSum = res.data.goods;
-      // })
-      // .catch((err) => {
-      //   alert(err);
-      //   console.error(err);
-      // })
-      // this.likedFlag = true
+      console.log(this.likedFlag);
+      let payload = {
+        goods: 1
+      }
+      this.$axios.post('works/' + String(this.work_id) + '/goods/', payload)
+      .then((res) => {
+        this.likeSum = res.data.goods;
+      })
+      .catch((err) => {
+        alert(err);
+        console.error(err);
+      })
+      this.likedFlag = true
     }
   }
 };
