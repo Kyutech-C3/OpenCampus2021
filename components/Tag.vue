@@ -1,10 +1,10 @@
 <template>
 	<div
 		class="tag"
-		:style="small ? smallStyle : style"
-		:class="{selected, deletable, small}"
+		:style="outline ? outlineStyle : style"
+		:class="{ selected, deletable, small, 'extra-small': extraSmall }"
 	>
-		<div>
+		<div class="bold">
 			{{ tag.name }}
 		</div>
 		<font-awesome-icon
@@ -41,13 +41,23 @@ export default {
 			type: Boolean,
 			require: false,
 			default: () => (false)
+		},
+		extraSmall: {
+			type: Boolean,
+			require: false,
+			default: () => (false)
+		},
+		outline: {
+			type: Boolean,
+			require: false,
+			default: () => (false)
 		}
 	},
 	computed: {
 		style() {
 			return `background-color: ${this.tag.color};`
 		},
-		smallStyle() {
+		outlineStyle() {
 			return `color: ${this.tag.color}; border: solid 1.5px ${this.tag.color}`
 		}
 	},
@@ -58,14 +68,17 @@ export default {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding: 5px 10px;
+	padding: 5px 15px;
 	font-size: 1rem;
 	color: #ffffff;
 	border-radius: 15.5px;
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 3px 5px;
 }
 .small {
 	font-size: 12px;
+}
+.extra-small {
+	font-size: 12px;
+	padding: 3px 12px;
 }
 .delete-button {
 	vertical-align: middle;
