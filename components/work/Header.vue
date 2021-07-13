@@ -3,7 +3,7 @@
         <dev class="header_top">
             <div class="header_left">
                 <span class="title">{{title}}</span>
-                <download :download_link="download_link" class="download"/>
+                <download :download_link="download_link" class="download" v-if="download_link != ull"/>
             </div>
             <div class="l">
                 <favorite :goods="goods" class="favorite"/>
@@ -126,7 +126,7 @@ export default {
         download_link: {
             type: String,
             required:true,
-            default: null
+            default: "a"
         },
         goods: {
             type: Number,
@@ -227,14 +227,14 @@ export default {
         height: 350px;
     }
     .work_info {
-        margin-left: 20px;
-        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
         width: 100%;
         height: auto;
     }
     .header_bottom {
-        margin-left: 20px;
-        padding: 0;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
 }

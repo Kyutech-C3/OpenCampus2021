@@ -38,7 +38,7 @@ export const header1 = () => ({
     download_link: {
         type: String,
         required: true,
-        default: null
+        default: ""
     },
     goods: {
         type: Number,
