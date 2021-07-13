@@ -33,8 +33,20 @@
 </style>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+
 html {
   font-family:
+    'Inter',
+    'YuGothic Medium',
+    'Yu Gothic Medium',
+    'YuGothic',
+    'Yu Gothic',
+    'Hiragino Sans',
+    'ヒラギノ角ゴシック',
+    'Noto Sans CJK JP',
+    'メイリオ',
+    'Meiryo',
     'Source Sans Pro',
     -apple-system,
     BlinkMacSystemFont,
@@ -43,6 +55,7 @@ html {
     'Helvetica Neue',
     Arial,
     sans-serif;
+  font-weight: 300;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -50,6 +63,29 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+.bold {
+  font-family:
+    'Inter',
+    'YuGothic Bold',
+    'Yu Gothic Bold',
+    'YuGothic',
+    'Yu Gothic',
+    'Hiragino Sans',
+    'ヒラギノ角ゴシック',
+    'Noto Sans CJK JP',
+    'メイリオ',
+    'Meiryo',
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  font-weight: 600;
 }
 
 *,
