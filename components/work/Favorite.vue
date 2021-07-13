@@ -4,7 +4,7 @@
       <font-awesome-icon :icon="['far', 'heart']" class="farHeart" v-if="!likedFlag"/>
       <font-awesome-icon :icon="['fas', 'heart']" class="fasHeart" v-if="likedFlag"/>
     </div>
-    <span class="fa_num">{{likeSum}}</span>
+    <div class="fa_num">{{likeSum}}</div>
   </div>
 </template>
 
@@ -48,19 +48,19 @@ export default {
   },
   methods: {
     submitFavo() {
-      console.log(this.likedFlag);
-      let payload = {
-        goods: 1
-      }
-      this.$axios.post('works/' + String(this.work_id) + '/goods/', payload)
-      .then((res) => {
-        this.likeSum = res.data.goods;
-      })
-      .catch((err) => {
-        alert(err);
-        console.error(err);
-      })
-      this.likedFlag = true
+      // console.log(this.likedFlag);
+      // let payload = {
+      //   goods: 1
+      // }
+      // this.$axios.post('works/' + String(this.work_id) + '/goods/', payload)
+      // .then((res) => {
+      //   this.likeSum = res.data.goods;
+      // })
+      // .catch((err) => {
+      //   alert(err);
+      //   console.error(err);
+      // })
+      // this.likedFlag = true
     }
   }
 };
