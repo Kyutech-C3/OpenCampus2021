@@ -1,8 +1,36 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="root-wrapper">
+    <div class="root-container">
+      <Nuxt />
+    </div>
   </div>
 </template>
+
+<style lang="css" scoped>
+.root-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.root-container {
+  height: 100vh;
+}
+
+@media (min-width: 1920px) {
+  .root-container {
+    width: 1920px;
+  }
+}
+
+@media (max-width: calc(1920px - 1px)) {
+  .root-container {
+    width: 100%;
+  }
+}
+
+</style>
 
 <style>
 html {
