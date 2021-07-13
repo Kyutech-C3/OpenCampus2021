@@ -14,26 +14,36 @@ export default {
     work_id: {
       type: Number,
       require: true,
+    },
+    goods: {
+      type: Number,
+      require: true,
     }
   },
   data () {
     return {
-      likeSum: 0,
+      likeSum: undefined,
       likedFlag: false,
     }
   },
+  // mounted () {
+  //   this.$nextTick( function () {
+  //     console.log(this.work_id);
+  //     this.$axios.get('works/' + String(this.work_id))
+  //     .then((res) => {
+  //       console.log(res)
+  //       this.likeSum = res.data.goods;
+  //     })
+  //     .catch((err) => {
+  //       alert(err);
+  //       console.error(err);
+  //     })
+  //   })
+  // },
   mounted () {
     this.$nextTick( function () {
-      console.log(this.work_id);
-      this.$axios.get('works/' + String(this.work_id))
-      .then((res) => {
-        console.log(res)
-        this.likeSum = res.data.goods;
-      })
-      .catch((err) => {
-        alert(err);
-        console.error(err);
-      })
+      console.log(this.goods);
+      this.likeSum = this.goods;
     })
   },
   methods: {
