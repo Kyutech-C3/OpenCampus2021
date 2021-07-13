@@ -6,19 +6,21 @@
     </div>
     <!-- <card-list :card_items="genre.works" /> -->
     <tag-selector :tags="allTags" v-model="selectedTags" />
+
+    <card-list :card_items="tagFilteredWorks" />
   </div>
 </template>
 
 <script>
 import TagSelector from '../../components/work/TagSelector.vue';
-//import CardList from "../../components/community/CardList.vue";
+import CardList from "../../components/community/CardList.vue";
 //import Header from "../../components/Header.vue"
 //import card_items from "../../assets/posts.json";
 
 export default {
   components: {
-    TagSelector
-    // CardList,
+    TagSelector,
+    CardList
     // Header
   },
   data() {
@@ -28,13 +30,25 @@ export default {
       selectedTags: []
     };
   },
-  computed() {
-    allTags: () => {
+  computed: {
+    allTags() {
       let tags = []
       this.genre.works.forEach((work) => {
         tags = tags.concat(work.tags.filter(t => !tags.includes(t)))
       })
       return tags
+    },
+    tagFilteredWorks() {
+      // console.debug(this.genre.works, this.selectedTags)
+      console.debug('all works')
+      if(this.selectedTags.length === 0) {
+        console.debug(this.genre.works)
+        return this.genre.works
+      } else {
+        return this.genre.works.filter(work => (
+          !!this.selectedTags.filter(t => work.tags.includes(t)).length
+        ))
+      }
     }
   },
   async asyncData({ error, params, $axios }) {
