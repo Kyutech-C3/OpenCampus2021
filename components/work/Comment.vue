@@ -97,16 +97,11 @@ label{
 	font-size: 20px;
 }
 .comment-form-wrapper {
-	margin-right: 10%;
-	margin-left: 5%;
+	margin-left: 7%;
 	margin-bottom: 20px;
 }
-.comment {
-	width: 90%;
-	margin: auto;
-}
 .username-form {
-	width: 40%;
+	width: 35%;
 	margin-bottom: 10px;
 	height: 25px;
 	font-size: 16px;
@@ -137,7 +132,7 @@ label{
 .send-button{
 	font-size: 15px;
 	margin: 10px 0;
-	padding: 3px 35px;
+	padding: 3px 32px;
 	border-radius: 6px;
 	background-color: #0000;
 	border: 2px #777 solid;

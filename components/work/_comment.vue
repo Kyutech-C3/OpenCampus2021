@@ -1,10 +1,9 @@
 <template>
-	<div class="comment-wrapper">
-		<div v-for="comment_data in comment_list" v-bind:key="comment_data.id">
-			<div class="comment-component">
-					<p class="username-view">{{ comment_data.name }}</p>
-					<p class="comment-view">{{ comment_data.text }}</p>
-			</div>
+	<div class="comment-list-wrapper">
+		<div v-for="comment in comment_list" v-bind:key="comment.id" class="comment-wrapper">
+			<p class="comment-name">{{ comment.name }}</p>
+			<p class="comment-text">{{ comment.text }}</p>
+			<p class="comment-date">{{ getDate(comment.created_at) }}</p>
 		</div>
 	</div>
 </template>
@@ -29,26 +28,27 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.comment-list-wrapper {
+	margin-left: 7%;
+}
 .comment-wrapper {
-	margin-right: 10%;
-	margin-left: 5%;
+	margin-bottom: 10px;
+	background-color: #EEE5;
+	border-radius: 5px;
 }
-.comment-component {
-	display: flex;
-	width: 100%;
-	margin-bottom: 13px;
+.comment-name {
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 5px 5px 0 5px;
 }
-.comment-info {
-	display: flex;
-	flex-direction: column;
+.comment-text {
+	padding: 0 5px;
 }
-.username-view {
-	width: calc(4vw + 40px);
-	padding-right: 15px;
-	border-right: 1px black solid;
-}
-.comment-view {
-	padding-left: 15px;
-	max-width: calc(60vw - 30px);
+.comment-date {
+	font-size: 11px;
+	text-align: right;
+	padding: 5px;
 }
 </style>
