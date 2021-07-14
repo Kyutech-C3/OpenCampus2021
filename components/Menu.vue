@@ -11,7 +11,7 @@
           <ul>
             <li>
               <div class="home">
-                <a href="#0">
+                <a href="/">
                   <font-awesome-icon class="icon" icon="home" />
                   HOME
                 </a>
@@ -20,7 +20,7 @@
             <li><p>作品を見る</p></li>
             <li>
               <div class="list">
-                <a href="#0">
+                <a :href="items[0].linkUrl">
                   <font-awesome-icon class="icon" icon="gamepad" />
                   GAME
                 </a>
@@ -28,7 +28,7 @@
             </li>
             <li>
               <div class="list">
-                <a href="#0">
+                <a :href="items[1].linkUrl">
                   <font-awesome-icon class="icon" :icon="['far', 'images']" />
                   CG
                 </a>
@@ -36,7 +36,7 @@
             </li>
             <li>
               <div class="list">
-                <a href="#0">
+                <a :href="items[2].linkUrl">
                   <font-awesome-icon class="icon" icon="laptop-code" />
                   HACK
                 </a>
@@ -44,7 +44,7 @@
             </li>
             <li>
               <div class="list">
-                <a href="#0">
+                <a :href="items[3].linkUrl">
                   <font-awesome-icon class="icon" icon="palette" />
                   MEDIA_ART
                 </a>
@@ -56,6 +56,43 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    items: {
+      type: Object,
+      required: false,
+      default: [
+        {
+          name: "GAME",
+          description: "GAMEコミュの説明",
+          imgUrl: "",
+          linkUrl: "/community/1"
+        },
+        {
+          name: "CG",
+          description: "CGコミュの説明",
+          imgUrl: "",
+          linkUrl: "/community/2"
+        },
+        {
+          name: "HACK",
+          description: "HACKコミュの説明",
+          imgUrl: "",
+          linkUrl: "/community/3"
+        },
+        {
+          name: "MEDIA ART",
+          description: "MEDIA ARTコミュの説明",
+          imgUrl: "",
+          linkUrl: "/community/4"
+        }
+      ]
+    }
+  }
+};
+</script>
 
 <style scoped>
 .nav-wrap {
@@ -174,10 +211,3 @@ ul {
   list-style: none;
 }
 </style>
-
-<script>
-
-export default {
-  
-}
-</script>
