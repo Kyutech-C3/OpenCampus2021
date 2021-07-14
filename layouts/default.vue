@@ -1,10 +1,28 @@
 <template>
   <div class="root-wrapper">
+    <!--<Header v-if="isRootPath" />-->
     <div class="root-container">
       <Nuxt />
     </div>
+    <Footer />
   </div>
 </template>
+<script>
+// import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
+
+export default {
+  components: {
+    // Header,
+    Footer
+  },
+  computed: {
+    isRootPath() {
+      return this.$route.path === '/'
+    }
+  }
+}
+</script>
 
 <style lang="css" scoped>
 .root-wrapper {
@@ -15,7 +33,8 @@
 }
 
 .root-container {
-  height: 100vh;
+  min-height: 100vh;
+  padding: var(--root-padding);
 }
 
 @media (min-width: 1920px) {
