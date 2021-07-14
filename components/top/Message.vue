@@ -41,7 +41,7 @@
   }
 }
 /* スマホ幅 */
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 480px) {
   .main {
     padding: 8vh 0 10vh 0;
     margin: 0 auto;
