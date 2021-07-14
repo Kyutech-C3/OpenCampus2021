@@ -23,6 +23,9 @@
                     <font-awesome-icon :icon="['fas', 'redo']" />
                     <span>{{ getDate(created_at) }}</span>
                 </div>
+
+                <work-link v-if="work_link" :to="work_link" />
+
                 <div class="tag_title">
                     <font-awesome-icon :icon="['fas', 'tags']" />
                     <span>タグ</span>
@@ -41,12 +44,14 @@ import Favorite from "./Favorite.vue"
 import Download from "./Download.vue"
 import Viewer from "./Viewer.vue"
 import TagList from './TagList.vue'
+import WorkLink from './WorkLink.vue'
 export default {
     components: {
         Favorite,
         Download,
         Viewer,
-        TagList
+        TagList,
+        WorkLink
     },
     data() {
         return {
@@ -122,6 +127,10 @@ export default {
         work_id: {
             type: Number,
             require:true,
+        },
+        work_link: {
+            type: String,
+            required: false,
         },
         download_link: {
             type: String,
