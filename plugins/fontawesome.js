@@ -14,15 +14,20 @@ import {
 	faFileDownload,
 	faUsers,
 	faRedo,
-	faTags
+	faTags,
+	faHome,
+	faGamepad,
+	faLaptopCode,
+	faPalette
 } from '@fortawesome/free-solid-svg-icons'
-import {
+import { 
 	faYoutube,
 	faTwitter
 } from '@fortawesome/free-brands-svg-icons'
 import {
 	faCommentDots,
-	faHeart
+  faHeart,
+	faImages
 } from '@fortawesome/free-regular-svg-icons'
 
 config.autoAddCss = false
@@ -43,7 +48,12 @@ library.add(
 	faFileDownload,
 	faUsers,
 	faRedo,
-	faTags
+	faTags,
+	faHome,
+	faGamepad,
+	faImages,
+	faLaptopCode,
+	faPalette
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
