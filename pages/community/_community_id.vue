@@ -59,8 +59,6 @@ export default {
     }
   },
   async asyncData({ error, params, $axios }) {
-    console.debug('$axios', $axios)
-    console.log('$axios', $axios)
     const res = await $axios.get(`genres/${params.community_id}/`).catch(e => {
       console.error('failed', e)
     })
