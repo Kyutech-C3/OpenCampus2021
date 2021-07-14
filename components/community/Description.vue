@@ -25,9 +25,6 @@ div{
 	--base-color: #495D7E;
 	--highlight-color: #FCFB6B;
 }
-.allWrapper {
-	margin: 0 5vw;
-}
 .name {
 	color: var(--base-color);
 	background:linear-gradient(transparent 60%, var(--highlight-color) 60%);
@@ -38,7 +35,7 @@ div{
 	margin-bottom: 3vw;
 }
 .description {
-	font-size: calc(1vw + 7px);
-	margin: 0 4%;
+	font-size: calc(0.5vw + 14px);
+	margin-left: 4%;
 }
 </style>
