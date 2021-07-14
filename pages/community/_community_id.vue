@@ -4,6 +4,9 @@
       <description :info="communityInfo" />
     </div>
     <div class="row">
+      <div class="name bold">作品</div>
+    </div>
+    <div class="row">
       <tag-selector :tags="allTags" v-model="selectedTags" />
     </div>
     <div class="row">
@@ -16,15 +19,12 @@
 import TagSelector from '../../components/work/TagSelector.vue';
 import CardList from "../../components/community/CardList.vue";
 import Description from '../../components/community/Description.vue';
-//import Header from "../../components/Header.vue"
-//import card_items from "../../assets/posts.json";
 
 export default {
   components: {
     TagSelector,
     CardList,
-    Description
-    // Header
+    Description,
   },
   data() {
     return {
@@ -78,6 +78,10 @@ export default {
 };
 </script>
 <style scoped>
+div {
+	--base-color: #495D7E;
+	--highlight-color: #FCFB6B;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -87,5 +91,14 @@ export default {
   display: flex;
   flex-direction: row;
   margin-bottom: 2rem;
+}
+.name {
+	color: var(--base-color);
+	background:linear-gradient(transparent 60%, var(--highlight-color) 60%);
+	font-size: calc(4.5vw + 10px);
+	display: inline-block;
+	white-space: nowrap;
+	padding-right: 10px;
+	margin-bottom: 3vw;
 }
 </style>
