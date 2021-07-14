@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="workPath" class="card-link">
     <article class="card">
-      <img src="../../assets/smple_img.png" alt="thumbnail" title="thumbnail" class="thumbnail"/>
+      <img :src="card_image" alt="thumbnail" title="thumbnail" class="thumbnail"/>
       <div class="tag_viewer1" v-if="isHoverFlag">
       </div>
       <div class="content">
