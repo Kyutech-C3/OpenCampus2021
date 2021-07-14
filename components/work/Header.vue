@@ -21,7 +21,7 @@
                 </div>
                 <div class="created_at">
                     <font-awesome-icon :icon="['fas', 'redo']" />
-                    <span>{{created_at}}</span>
+                    <span>{{ getDate(created_at) }}</span>
                 </div>
                 <div class="tag_title">
                     <font-awesome-icon :icon="['fas', 'tags']" />
@@ -142,7 +142,16 @@ export default {
             required: true,
             default: "2021-07-24T16:29:49.212Z"
         }
-    }
+    },
+    methods: {
+		getDate(datetime) {
+			let formatted_datetime = new Date(datetime);
+			return `${formatted_datetime.getFullYear()}/${this.zeroPadding(formatted_datetime.getMonth()+1, 2)}/${this.zeroPadding(formatted_datetime.getDate(), 2)} ${this.zeroPadding(formatted_datetime.getHours(), 2)}:${this.zeroPadding(formatted_datetime.getMinutes(), 2)}:${this.zeroPadding(formatted_datetime.getSeconds(), 2)}`
+		},
+		zeroPadding(num,length) {
+			return ('0000000000' + num).slice(-length);
+		}
+	}
 }
 </script>
 
@@ -152,7 +161,6 @@ export default {
     align-items: center;
     justify-content: space-between;
     height: 70px;
-    margin: 0 auto;
 }
 .title {
     align-self: center;
@@ -164,9 +172,6 @@ export default {
     margin-left: 10px;
 
 }
-.favorite {
-    text-align: right;
-}
 .header_mid {
     display: flex;
     justify-content: center;
@@ -174,7 +179,6 @@ export default {
     height: auto;
 }
 .viewer {
-    /* flex-grow: 2; */
     width: 100%;
     height: auto;
 }
@@ -182,7 +186,6 @@ export default {
     margin-left: 20px;
     width: 400px;
     height: 550px;
-    /* flex-grow: 0; */
 }
 .member_title {
     font-size: 15px;
