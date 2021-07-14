@@ -6,7 +6,7 @@
                 <download :download_link="download_link" class="download" v-if="download_link != ull"/>
             </div>
             <div class="l">
-                <favorite :goods="goods" class="favorite"/>
+                <favorite :work_id="work_id" :goods="goods" class="favorite"/>
             </div>
         </dev>
         <div class="header_mid">
@@ -175,7 +175,7 @@ export default {
 .header_mid {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     height: auto;
 }
 .viewer {
@@ -203,8 +203,7 @@ export default {
     margin-bottom: 20px;
 }
 .header_bottom {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 7%;
 }
 
 @media screen and (max-width: 1300px) {
@@ -235,11 +234,6 @@ export default {
         width: 100%;
         height: auto;
     }
-    .header_bottom {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
 }
 @media screen and (max-width: 481px) {
     .viewer {

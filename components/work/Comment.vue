@@ -28,6 +28,10 @@ export default {
 		work_num: {
 			type: Number,
 			require: true
+		},
+		comment_list: {
+			type: Array,
+			require: true
 		}
 	},
 	data() {
@@ -42,19 +46,8 @@ export default {
 		}
 	},
 	mounted() {
-		this.$nextTick(function () {
-			console.log(this.work_num);
-			this.$axios.get('works/' + String(this.work_num) + '/comments/')
-			.then((res) => {
-				console.log(res)
-				this.comments = res.data;
-				this.preview_comments = this.comments.splice(0, 2);
-			})
-			.catch((err) => {
-				alert(err);
-				console.error(err);
-			})
-		})
+		this.comments = this.comment_list;
+		this.preview_comments = this.comments.splice(0, 2);
 	},
 	methods: {
 		SwitchCommentList(){
