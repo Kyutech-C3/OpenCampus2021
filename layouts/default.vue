@@ -1,7 +1,7 @@
 <template>
   <div class="root-wrapper">
     <!--<Header v-if="isRootPath" />-->
-    <div class="root-container">
+    <div :class="{ 'root-container': true, 'disable-padding': isRootPath }">
       <Nuxt />
     </div>
     <Footer />
@@ -35,6 +35,10 @@ export default {
 .root-container {
   min-height: 100vh;
   padding: var(--root-padding);
+}
+
+.root-container.disable-padding {
+  padding: 0;
 }
 
 @media (min-width: 1920px) {
