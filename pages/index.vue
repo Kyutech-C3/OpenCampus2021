@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Menu />
     <top />
     <about-c-3 />
     <communities-hero :items="items" />
@@ -12,9 +13,10 @@ import AboutC3 from "../components/top/AboutC3.vue";
 import CommunitiesHero from "../components/top/CommunitiesHero.vue";
 import Message from "../components/top/Message.vue";
 import Top from "../components/top/Top.vue";
+import Menu from "../components/Menu.vue";
 
 export default {
-  components: { Top, AboutC3, CommunitiesHero, Message },
+  components: { Top, AboutC3, CommunitiesHero, Message, Menu},
   data() {
     return {
       items: [
