@@ -20,7 +20,7 @@
             <li><p>作品を見る</p></li>
             <li>
               <div class="list">
-                <a :href="items[0].linkUrl">
+                <a href="linkUrl1">
                   <font-awesome-icon class="icon" icon="gamepad" />
                   GAME
                 </a>
@@ -28,7 +28,7 @@
             </li>
             <li>
               <div class="list">
-                <a :href="items[1].linkUrl">
+                <a href="linkUrl2">
                   <font-awesome-icon class="icon" :icon="['far', 'images']" />
                   CG
                 </a>
@@ -36,7 +36,7 @@
             </li>
             <li>
               <div class="list">
-                <a :href="items[2].linkUrl">
+                <a href="linkUrl3">
                   <font-awesome-icon class="icon" icon="laptop-code" />
                   HACK
                 </a>
@@ -44,7 +44,7 @@
             </li>
             <li>
               <div class="list">
-                <a :href="items[3].linkUrl">
+                <a href="linkUrl4">
                   <font-awesome-icon class="icon" icon="palette" />
                   MEDIA_ART
                 </a>
@@ -59,36 +59,12 @@
 
 <script>
 export default {
-  props: {
-    items: {
-      type: Object,
-      required: false,
-      default: [
-        {
-          name: "GAME",
-          description: "GAMEコミュの説明",
-          imgUrl: "",
-          linkUrl: "/community/1"
-        },
-        {
-          name: "CG",
-          description: "CGコミュの説明",
-          imgUrl: "",
-          linkUrl: "/community/2"
-        },
-        {
-          name: "HACK",
-          description: "HACKコミュの説明",
-          imgUrl: "",
-          linkUrl: "/community/3"
-        },
-        {
-          name: "MEDIA ART",
-          description: "MEDIA ARTコミュの説明",
-          imgUrl: "",
-          linkUrl: "/community/4"
-        }
-      ]
+  data() {
+    return {
+      linkUrl1: "/community/1",
+      linkUrl2: "/community/2",
+      linkUrl3: "/community/3",
+      linkUrl4: "/community/4"
     }
   }
 };
@@ -96,11 +72,15 @@ export default {
 
 <style scoped>
 .nav-wrap {
-  position: relative;
+  position: fixed;
+  margin-top: 30px;
   z-index: 99;
 }
+.nav-container {
+  position: relative;
+}
 .button {
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   height: 30px;
@@ -138,13 +118,13 @@ export default {
   transform: translate3d(0, -9px, 0) rotate(45deg);
 }
 .nav-content {
-  padding: 70px 0 0 30px;
+  padding: 100px 0 0 30px;
   max-width: 300px;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: -30px;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 250px;
+  height: 100vh;
   background: #4a4a4a;
   pointer-events: auto;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -184,10 +164,6 @@ export default {
 .nav-container:focus-within .nav-content {
   transform: none;
 }
-html,
-body {
-  height: 100%;
-}
 a,
 a:visited,
 a:focus,
@@ -199,12 +175,6 @@ a:link {
 a {
   color: currentColor;
   transition: 0.2s ease-in-out;
-}
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
 }
 ul {
   padding: 0;
