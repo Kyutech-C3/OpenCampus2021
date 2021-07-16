@@ -32,6 +32,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -57,4 +58,8 @@ export default {
       '@storybook/addon-viewport/register',
         ],
     },
+
+  googleAnalytics: {
+    id: 'G-HT71B54RCT'
+  }
 }
