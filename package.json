@@ -17,6 +17,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/google-analytics": "^2.4.0",
+    "hooper": "^0.3.4",
     "nuxt": "^2.15.3",
     "vue-select": "^3.11.2"
   },
