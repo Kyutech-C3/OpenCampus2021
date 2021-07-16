@@ -1,16 +1,18 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <description :info="communityInfo" />
-    </div>
-    <div class="row">
-      <div class="name bold">作品</div>
-    </div>
-    <div class="row">
-      <tag-selector :tags="allTags" v-model="selectedTags" />
-    </div>
-    <div class="row">
-      <card-list :card_items="tagFilteredWorks" />
+  <div>
+    <div class="container">
+      <div class="row">
+        <description :info="communityInfo" />
+      </div>
+      <div class="row">
+        <div class="name bold">作品</div>
+      </div>
+      <div class="row">
+        <tag-selector :tags="allTags" v-model="selectedTags" />
+      </div>
+      <div class="row">
+        <card-list :card_items="tagFilteredWorks" />
+      </div>
     </div>
   </div>
 </template>
@@ -83,7 +85,7 @@ div {
 .container {
   display: flex;
   flex-direction: column;
-  margin: 0 5rem;
+  margin-top: 2rem;
 }
 .row {
   display: flex;
