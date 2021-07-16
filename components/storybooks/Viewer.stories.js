@@ -39,7 +39,7 @@ const sketchfabMediaAsset = {
 
 export const AllKindViewer = () => ({
   components: { Viewer },
-  template: '<div><Viewer :mediaAssets="mediaAssets"/></div>',
+  template: '<div style="height: 500px;"><Viewer :mediaAssets="mediaAssets"/></div>',
   props: {
     mediaAssets: {
       default: [

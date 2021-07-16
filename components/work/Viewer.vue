@@ -1,28 +1,28 @@
 <template>
-	<div>
-		<div class="container">
-			<hooper :itemsToShow="1" style="height: 100%;">
-				<slide v-for="mediaAsset in mediaAssets" :key="mediaAsset.id" style="height: auto;">
-					<you-tube v-if="mediaAsset.youtube_video_id !== null" :youtubeID="mediaAsset.youtube_video_id" />
-					<image-asset v-if="mediaAsset.image !== null" :src="mediaAsset.image" />
-					<sound-cloud v-if="mediaAsset.soundcloud_embed_html !== ''" :soundcloudEmbedHTML="mediaAsset.soundcloud_embed_html" />
-					<sketchfab v-if="mediaAsset.sketchfab_embed_html !== ''" :sketchfabEmbedHTML="mediaAsset.sketchfab_embed_html" />
-				</slide>
-				<slide v-if="mediaAssets.length === 0">
-					<div class="wrapper">
-						<div class="title">アセットがありません</div>
-					</div>
-				</slide>
-				<hooper-pagination slot="hooper-addons"></hooper-pagination>
-			</hooper>
-		</div>
+	<div class="container">
+		<hooper :itemsToShow="1" style="height: 100%;">
+			<slide v-for="mediaAsset in mediaAssets" :key="mediaAsset.id" style="height: auto;">
+				<you-tube v-if="mediaAsset.youtube_video_id !== null" :youtubeID="mediaAsset.youtube_video_id" />
+				<image-asset v-if="mediaAsset.image !== null" :src="mediaAsset.image" />
+				<sound-cloud v-if="mediaAsset.soundcloud_embed_html !== ''" :soundcloudEmbedHTML="mediaAsset.soundcloud_embed_html" />
+				<sketchfab v-if="mediaAsset.sketchfab_embed_html !== ''" :sketchfabEmbedHTML="mediaAsset.sketchfab_embed_html" />
+			</slide>
+			<slide v-if="mediaAssets.length === 0">
+				<div class="wrapper">
+					<div class="title">アセットがありません</div>
+				</div>
+			</slide>
+			<hooper-pagination slot="hooper-addons"></hooper-pagination>
+			<hooper-navigation slot="hooper-addons"></hooper-navigation>
+		</hooper>
 	</div>
 </template>
 <script>
 import {
 	Hooper,
 	Slide,
-	Pagination as HooperPagination
+	Pagination as HooperPagination,
+	Navigation as HooperNavigation
 } from 'hooper'
 import 'hooper/dist/hooper.css'
 import YouTube from './medias/YouTube'
@@ -36,6 +36,7 @@ export default {
 		Hooper,
 		Slide,
 		HooperPagination,
+		HooperNavigation,
 		YouTube,
 		ImageAsset,
 		SoundCloud,
