@@ -139,11 +139,9 @@ export default {
 .nav-content li a,
 .nav-content li p {
   padding: 5px 5px;
-  display: block;
-  text-transform: uppercase;
-  transition: color 0.1s;
   color: white;
   font-size: max(5%, 20px);
+  text-align: left;
 }
 
 .nav-content li a:hover {
