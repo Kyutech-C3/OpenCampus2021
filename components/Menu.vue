@@ -1,13 +1,14 @@
 <template>
-  <div class="nav-wrap">
-    <div class="nav-container">
-      <div class="menu">
-        <div class="button" tabindex="0">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </div>
-        <div class="nav-content">
+  <div>
+    <!-- ハンバーガーメニューのボタン -->
+    <div class="button" @click="ActiveBtn=!ActiveBtn">
+      <span class="icon-bar line-1" :class="{'close-1':ActiveBtn}"></span>
+      <span class="icon-bar line-2" :class="{'close-2':ActiveBtn}"></span>
+      <span class="icon-bar line-3" :class="{'close-3':ActiveBtn}"></span>
+    </div>
+    <!-- サイドメニュー -->
+    <transition name="slide">
+      <div class="nav-content" v-show="ActiveBtn">
           <ul>
             <li>
               <div class="home">
@@ -52,8 +53,7 @@
             </li>
           </ul>
         </div>
-      </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -61,6 +61,7 @@
 export default {
   data() {
     return {
+      ActiveBtn: false,
       linkUrl1: "/community/1",
       linkUrl2: "/community/2",
       linkUrl3: "/community/3",
@@ -71,69 +72,55 @@ export default {
 </script>
 
 <style scoped>
-.nav-wrap {
-  position: fixed;
-  margin-top: 30px;
-  z-index: 99;
-}
-.nav-container {
-  position: relative;
-}
 .button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  height: 30px;
-  width: 30px;
-  margin: 0;
-  z-index: 100;
-  -webkit-appearance: none;
-  border: 0;
-  border-radius: 0;
+  position: fixed;
   cursor: pointer;
-  pointer-events: auto;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  z-index: 100;
+  padding: 10px;
 }
 .icon-bar {
   display: block;
   width: max(4vh, 20px);
   height: 2px;
   background: lightgray;
-  transition: 0.3s;
 }
 .icon-bar + .icon-bar {
-  margin-top: 7px;
+  margin-top: 8px;
 }
-.nav-container:focus-within .button {
-  pointer-events: none;
+.line-1, .line-2, .line-3 {
+  transition: 0.3s ease;
 }
-.nav-container:focus-within .icon-bar:nth-of-type(1) {
-  transform: translate3d(0, 9px, 0) rotate(-45deg);
+.close-1 {
+  transform: translate3d(0, 10px, 0) rotate(-45deg);
+  transition: 0.3s ease;
 }
-.nav-container:focus-within .icon-bar:nth-of-type(2) {
+.close-2 {
+  transition: 0.3s ease;
   opacity: 0;
 }
-.nav-container:focus-within .icon-bar:nth-of-type(3) {
-  transform: translate3d(0, -9px, 0) rotate(45deg);
+.close-3 {
+  transform: translate3d(0, -10px, 0) rotate(45deg);
+  transition: 0.3s ease;
 }
 .nav-content {
-  padding: 100px 0 0 30px;
-  max-width: 300px;
-  position: absolute;
-  top: -30px;
+  margin: 0;
+  padding: 100px 0 0 40px;
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 250px;
-  height: 100vh;
+  height: 100%;
   background: #4a4a4a;
   pointer-events: auto;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  transform: translateX(-100%);
-  transition: transform 0.3s;
-  will-change: transform;
-  contain: paint;
   flex-direction: column;
   z-index: 99;
+}
+.slide-enter-active, .slide-leave-active {
+  transform: translate(0px, 0px);
+  transition: 0.4s ease;
+}
+.slide-enter, .slide-leave-to {
+  transform: translateY(0) translateX(-100%);
+  transition: 0.4s ease;
 }
 .home {
   margin-bottom: 10px;
@@ -156,6 +143,7 @@ export default {
   text-transform: uppercase;
   transition: color 0.1s;
   color: white;
+  font-size: max(5%, 20px);
 }
 
 .nav-content li a:hover {
@@ -179,5 +167,25 @@ a {
 ul {
   padding: 0;
   list-style: none;
+}
+/* スマホ以上 */
+@media screen and (min-width: 481px) {
+  .button {
+    top: 20px;
+    left: 20px;
+  }
+  .nav-content {
+    width: 300px;
+  }
+}
+/* スマホ幅 */
+@media screen and (max-width: 480px) {
+  .button {
+    top: 10px;
+    left: 10px;
+  }
+  .nav-content {
+    width: 80%;
+  }
 }
 </style>
