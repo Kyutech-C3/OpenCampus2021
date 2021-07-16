@@ -2,7 +2,7 @@
 	<div>
 		<div class="container">
 			<hooper :itemsToShow="1" style="height: 100%;">
-				<slide v-for="mediaAsset in mediaAssets" :key="mediaAsset.id">
+				<slide v-for="mediaAsset in mediaAssets" :key="mediaAsset.id" style="height: auto;">
 					<you-tube v-if="mediaAsset.youtube_video_id !== null" :youtubeID="mediaAsset.youtube_video_id" />
 					<image-asset v-if="mediaAsset.image !== null" :src="mediaAsset.image" />
 					<sound-cloud v-if="mediaAsset.soundcloud_embed_html !== ''" :soundcloudEmbedHTML="mediaAsset.soundcloud_embed_html" />
@@ -53,6 +53,9 @@ Sketchfab
 }
 </script>
 <style scoped>
+.container {
+	height: 100%;
+}
 .wrapper {
 	display: flex;
 	flex-direction: column;
