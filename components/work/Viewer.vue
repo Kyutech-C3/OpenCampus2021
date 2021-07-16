@@ -5,12 +5,17 @@
 				<slide v-for="mediaAsset in mediaAssets" :key="mediaAsset.id">
 					<you-tube v-if="mediaAsset.youtube_video_id !== null" :youtubeID="mediaAsset.youtube_video_id" />
 				</slide>
+				<hooper-pagination slot="hooper-addons"></hooper-pagination>
 			</hooper>
 		</div>
 	</div>
 </template>
 <script>
-import { Hooper, Slide } from 'hooper'
+import {
+	Hooper,
+	Slide,
+	Pagination as HooperPagination
+} from 'hooper'
 import 'hooper/dist/hooper.css'
 import YouTube from './YouTube.vue'
 
@@ -19,6 +24,7 @@ export default {
 	components: {
 		Hooper,
 		Slide,
+		HooperPagination,
 		YouTube,
 	},
 	props: {
