@@ -20,7 +20,7 @@
             <li><p>作品を見る</p></li>
             <li>
               <div class="list">
-                <a href="linkUrl1">
+                <a :href="linkUrl1">
                   <font-awesome-icon class="icon" icon="gamepad" />
                   GAME
                 </a>
@@ -28,7 +28,7 @@
             </li>
             <li>
               <div class="list">
-                <a href="linkUrl2">
+                <a :href="linkUrl2">
                   <font-awesome-icon class="icon" :icon="['far', 'images']" />
                   CG
                 </a>
@@ -36,7 +36,7 @@
             </li>
             <li>
               <div class="list">
-                <a href="linkUrl3">
+                <a :href="linkUrl3">
                   <font-awesome-icon class="icon" icon="laptop-code" />
                   HACK
                 </a>
@@ -44,7 +44,7 @@
             </li>
             <li>
               <div class="list">
-                <a href="linkUrl4">
+                <a :href="linkUrl4">
                   <font-awesome-icon class="icon" icon="palette" />
                   MEDIA_ART
                 </a>
