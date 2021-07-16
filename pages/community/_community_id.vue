@@ -63,9 +63,8 @@ export default {
   async asyncData({ error, params, $axios }) {
     const res = await $axios.get(`genres/${params.community_id}/`).catch(e => {
       console.error('failed', e)
+      throw new Error(e)
     })
-
-    console.debug(res)
 
     if( res.status === 200) {
       return {
