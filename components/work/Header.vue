@@ -10,7 +10,8 @@
             </div>
         </dev>
         <div class="header_mid">
-            <viewer :media_assets="media_assets" :card_image="card_image" class="viewer"/>
+            <!-- <viewer :media_assets="media_assets" :card_image="card_image" class="viewer"/> -->
+            <div class="viewer viewer_mock"></div>
             <div class="work_info">
                 <div class="member_title">
                     <font-awesome-icon :icon="['fas', 'users']" />
@@ -244,5 +245,9 @@ export default {
         width: 100%;
         height: auto;
     }
+}
+
+.viewer_mock {
+    background-color: blue;
 }
 </style>
