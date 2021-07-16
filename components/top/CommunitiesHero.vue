@@ -13,39 +13,10 @@ export default {
   components: { CommunityHero },
   props: {
     items: {
-      type: Object,
-      required: true,
-      default: [
-        {
-          name: "GAME",
-          description: "GAMEコミュの説明",
-          imgUrl: "",
-          linkUrl: ""
-        },
-        {
-          name: "CG",
-          description: "CGコミュの説明",
-          imgUrl: "",
-          linkUrl: ""
-        },
-        {
-          name: "HACK",
-          description: "HACKコミュの説明",
-          imgUrl: "",
-          linkUrl: ""
-        },
-        {
-          name: "MEDIA ART",
-          description: "MEDIA ARTコミュの説明",
-          imgUrl: "",
-          linkUrl: ""
-        }
-      ]
+      type: Array,
+      required: true
     }
-  },
-  data: () => ({
-    items: []
-  })
+  }
 };
 </script>
 

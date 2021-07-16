@@ -1,6 +1,6 @@
 <template>
 	<div class="allWrapper">
-		<p class="name">{{ info.name }}</p>
+		<p class="name bold">{{ info.name }}</p>
 		<p class="description">{{ info.description }}</p>
 	</div>
 </template>
@@ -24,6 +24,9 @@ props: {
 div{
 	--base-color: #495D7E;
 	--highlight-color: #FCFB6B;
+}
+.allWrapper {
+	margin: 0;
 }
 .name {
 	color: var(--base-color);

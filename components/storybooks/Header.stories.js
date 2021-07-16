@@ -3,7 +3,7 @@ export default { title: "Header" };
 
 export const header1 = () => ({
   components: { Header },
-  template: '<Header :title="title" :team="team" :tags="tags" :description="description" :card_image="card_image" :work_id="work_id" :download_link="download_link" :goods="goods" :media_assets="media_assets" :created_at="created_at"/>',
+  template: '<Header :title="title" :team="team" :tags="tags" :description="description" :card_image="card_image" :work_id="work_id" :work_link="work_link" :download_link="download_link" :goods="goods" :media_assets="media_assets" :created_at="created_at"/>',
   props: {
     title: {
       default: "hoge",
@@ -34,6 +34,11 @@ export const header1 = () => ({
         type: Number,
         require: true,
         default: 1
+    },
+    work_link: {
+        type: String,
+        required: true,
+        default: "https://compositecomputer.club"
     },
     download_link: {
         type: String,

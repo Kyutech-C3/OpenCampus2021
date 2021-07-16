@@ -1,7 +1,7 @@
 <template>
   <div class="root-wrapper">
-    <!--<Header v-if="isRootPath" />-->
-    <div class="root-container">
+    <Header v-if="!isRootPath" />
+    <div :class="{ 'root-container': true, 'disable-padding': isRootPath }">
       <Nuxt />
     </div>
     <Footer />
@@ -30,11 +30,18 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .root-container {
   min-height: 100vh;
   padding: var(--root-padding);
+  margin-top: 120px;
+}
+
+.root-container.disable-padding {
+  margin-top: 0;
+  padding: 0;
 }
 
 @media (min-width: 1920px) {
