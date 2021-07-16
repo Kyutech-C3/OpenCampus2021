@@ -1,9 +1,15 @@
 <template>
 	<div>
 		<div class="container">
-			<hooper>
+			<hooper :itemsToShow="1">
 				<slide v-for="mediaAsset in mediaAssets" :key="mediaAsset.id">
 					<you-tube v-if="mediaAsset.youtube_video_id !== null" :youtubeID="mediaAsset.youtube_video_id" />
+					<image-asset v-if="mediaAsset.image !== null" :src="mediaAsset.image" />
+				</slide>
+				<slide v-if="mediaAssets.length === 0">
+					<div class="wrapper">
+						<div class="title">アセットがありません</div>
+					</div>
 				</slide>
 				<hooper-pagination slot="hooper-addons"></hooper-pagination>
 			</hooper>
@@ -17,7 +23,8 @@ import {
 	Pagination as HooperPagination
 } from 'hooper'
 import 'hooper/dist/hooper.css'
-import YouTube from './YouTube.vue'
+import YouTube from './medias/YouTube'
+import ImageAsset from './medias/ImageAsset'
 
 export default {
 	name: 'Viewer',
@@ -26,24 +33,28 @@ export default {
 		Slide,
 		HooperPagination,
 		YouTube,
+		ImageAsset,
 	},
 	props: {
 		mediaAssets: {
 			type: Array,
-			default: () => ({
-				"id": 2,
-				"youtube_video_id": "CcMRnj_fVjs",
-				"image": "",
-				"sketchfab_embed_html": "",
-				"soundcloud_embed_html": "",
-				"work": 2
-			})
+			default: () => ([])
 		}
+	},
+	created() {
+		console.debug(this.mediaAssets)
 	}
 }
 </script>
 <style scoped>
-.container {
-
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.title {
+	text-align: center;
 }
 </style>
