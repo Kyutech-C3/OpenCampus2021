@@ -4,7 +4,7 @@ export default { title: "Viewer" };
 const youtubeMediaAsset = {
   "id": 2,
   "youtube_video_id": "CcMRnj_fVjs",
-  "image": "",
+  "image": null,
   "sketchfab_embed_html": "",
   "soundcloud_embed_html": "",
   "work": 2
@@ -28,6 +28,15 @@ const soundcloudMediaAsset = {
   "work": 2
 }
 
+const sketchfabMediaAsset = {
+  "id": 3,
+  "youtube_video_id": null,
+  "image": null,
+  "sketchfab_embed_html": '<div class="sketchfab-embed-wrapper"> <iframe title="LowPoly Pipboy" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f7c6d2fd0bdb48d694b37d510b04a553/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/lowpoly-pipboy-f7c6d2fd0bdb48d694b37d510b04a553?utm_medium=embed&utm_campaign=share-popup&utm_content=f7c6d2fd0bdb48d694b37d510b04a553" target="_blank" style="font-weight: bold; color: #1CAAD9;"> LowPoly Pipboy </a> by <a href="https://sketchfab.com/TristenPiert?utm_medium=embed&utm_campaign=share-popup&utm_content=f7c6d2fd0bdb48d694b37d510b04a553" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Tristen Piert </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=f7c6d2fd0bdb48d694b37d510b04a553" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>',
+  "soundcloud_embed_html": '',
+  "work": 2
+}
+
 export const AllKindViewer = () => ({
   components: { Viewer },
   template: '<div><Viewer :mediaAssets="mediaAssets"/></div>',
@@ -36,7 +45,8 @@ export const AllKindViewer = () => ({
       default: [
         imageMediaAsset,
         youtubeMediaAsset,
-        soundcloudMediaAsset
+        soundcloudMediaAsset,
+        sketchfabMediaAsset
       ]
     }
   }
