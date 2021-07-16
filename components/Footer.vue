@@ -2,7 +2,7 @@
   <footer>
     <ul>
       <li>
-        <a href="https://c3-open-campus-2021.netlify.app/"
+        <a href="https://oc2021.compositecomputer.club/"
           ><img id="logo" src="../static/Footer/C3logo.png" alt="logo"
         /></a>
       </li>
@@ -18,7 +18,7 @@
       <li>
         <a
           class="link"
-          href="https://c3-open-campus-2021.netlify.app/"
+          href="https://compositecomputer.club/"
           target="_blank"
         >
           C3 Official Website<font-awesome-icon class="link-icon" icon="external-link-alt" />
