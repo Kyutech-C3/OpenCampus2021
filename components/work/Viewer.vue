@@ -5,6 +5,7 @@
 				<slide v-for="mediaAsset in mediaAssets" :key="mediaAsset.id">
 					<you-tube v-if="mediaAsset.youtube_video_id !== null" :youtubeID="mediaAsset.youtube_video_id" />
 					<image-asset v-if="mediaAsset.image !== null" :src="mediaAsset.image" />
+					<sound-cloud v-if="mediaAsset.soundcloud_embed_html" :soundcloudEmbedHTML="mediaAsset.soundcloud_embed_html" />
 				</slide>
 				<slide v-if="mediaAssets.length === 0">
 					<div class="wrapper">
@@ -25,6 +26,7 @@ import {
 import 'hooper/dist/hooper.css'
 import YouTube from './medias/YouTube'
 import ImageAsset from './medias/ImageAsset'
+import SoundCloud from './medias/SoundCloud.vue'
 
 export default {
 	name: 'Viewer',
@@ -34,6 +36,7 @@ export default {
 		HooperPagination,
 		YouTube,
 		ImageAsset,
+		SoundCloud
 	},
 	props: {
 		mediaAssets: {
