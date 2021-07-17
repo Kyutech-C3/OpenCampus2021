@@ -37,7 +37,8 @@ export default {
 			options: {
 				itemsToShow: 1,
 				wheelControl: false,
-				centerMode: true
+				centerMode: true,
+				infiniteScroll: true
       },
 		}
 	},
