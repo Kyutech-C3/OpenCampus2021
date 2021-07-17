@@ -122,6 +122,11 @@ export default {
   width: fit-content;
   z-index: 10;
 }
+.button-wrapper:hover {
+  border: 2px solid #3b8070;
+  background-color: #35495e4d;
+  color: #3b8070;
+}
 @media screen and (max-width: 767px) {
   .button-wrapper {
     padding: 10px 30px;
