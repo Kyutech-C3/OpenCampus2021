@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
-		<hooper :itemsToShow="1" style="height: 100%;">
-			<slide v-for="mediaAsset in mediaAssets" :key="mediaAsset.id" style="height: auto;">
+		<hooper :settings="options" style="height: 100%;">
+			<slide v-for="mediaAsset in mediaAssets" :key="mediaAsset.id" style="width: 100%">
 				<you-tube v-if="mediaAsset.youtube_video_id !== null" :youtubeID="mediaAsset.youtube_video_id" />
 				<image-asset v-if="mediaAsset.image !== null" :src="mediaAsset.image" />
 				<sound-cloud v-if="mediaAsset.soundcloud_embed_html !== ''" :soundcloudEmbedHTML="mediaAsset.soundcloud_embed_html" />
@@ -32,6 +32,16 @@ import Sketchfab from './medias/Sketchfab.vue'
 
 export default {
 	name: 'Viewer',
+	data () {
+		return {
+			options: {
+				itemsToShow: 1,
+				wheelControl: false,
+				centerMode: true,
+				infiniteScroll: true
+      },
+		}
+	},
 	components: {
 		Hooper,
 		Slide,
@@ -40,7 +50,7 @@ export default {
 		YouTube,
 		ImageAsset,
 		SoundCloud,
-Sketchfab
+		Sketchfab
 	},
 	props: {
 		mediaAssets: {
