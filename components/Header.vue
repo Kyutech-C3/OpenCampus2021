@@ -31,6 +31,7 @@ header{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+  overflow: hidden;
 }
 .menu_bar{
   z-index: 5;
