@@ -61,5 +61,6 @@ export default {
 
   googleAnalytics: {
     id: 'G-HT71B54RCT'
-  }
+  },
+  target: 'static'
 }
