@@ -19,7 +19,8 @@ import {
 	faGamepad,
 	faLaptopCode,
 	faPalette,
-	faLink
+	faLink,
+	faFileAlt
 } from '@fortawesome/free-solid-svg-icons'
 import { 
 	faYoutube,
@@ -55,7 +56,8 @@ library.add(
 	faImages,
 	faLaptopCode,
 	faPalette,
-	faLink
+	faLink,
+	faFileAlt
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
