@@ -183,18 +183,19 @@ export default {
 }
 .header_mid {
     display: flex;
-    justify-content: center;
+    -webkit-flex-wrap: wrap; /* Safari etc. */
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
     margin-bottom: 30px;
     height: auto;
+    width: 100%;
 }
 .viewer {
-    width: 100%;
     height: auto;
 }
 .work_info {
+    margin-top: 20px;
     margin-left: 20px;
-    width: 400px;
-    height: 550px;
 }
 .member_title {
     font-size: 15px;
@@ -223,31 +224,22 @@ export default {
 	-ms-user-select: none;
 	user-select: none;
 }
-@media screen and (max-width: 1300px) {
-    .header_mid {
-        display: block;
-    }
+@media screen and (min-width: 1300px) {
     .viewer {
-        width: 100%;
-        height: 550px;
+        width: 70%;
     }
     .work_info {
-        margin-top: 20px;
         margin-left: 0px;
-        padding-left: 100px;
-        padding-right: 100px;
-        width: 100%;
+        padding-left: 20px;
+        width: 30%;
         height: auto;
     }
 }
 @media screen and (max-width: 900px) {
     .viewer {
         width: 100%;
-        height: 350px;
     }
     .work_info {
-        padding-left: 20px;
-        padding-right: 20px;
         width: 100%;
         height: auto;
     }
@@ -255,7 +247,6 @@ export default {
 @media screen and (max-width: 481px) {
     .viewer {
         width: 100%;
-        height: 200px;
     }
     .work_info {
         width: 100%;
