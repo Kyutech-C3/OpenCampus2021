@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/community/4", {data:[{genre:{id:4,works:[],title:"Media_art",description:"No description...",bg_color:"#00FF32"}}],fetch:{},mutations:void 0});
