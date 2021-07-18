@@ -81,7 +81,7 @@
     display: flex;
   }
   .mainContent {
-    margin: 0 auto;
+    margin: 0 30px;
     display: inline-block;
   }
 }
