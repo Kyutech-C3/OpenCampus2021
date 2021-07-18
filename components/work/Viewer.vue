@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
-		<hooper :settings="options" style="height: 100%;">
-			<slide v-for="mediaAsset in mediaAssets" :key="mediaAsset.id" style="width: 100%">
+		<hooper :settings="options" style="height: 100%; width: 100%">
+			<slide v-for="mediaAsset in mediaAssets" :key="mediaAsset.id" style="width: 100%; height: 100%;">
 				<you-tube v-if="mediaAsset.youtube_video_id !== null" :youtubeID="mediaAsset.youtube_video_id" />
 				<image-asset v-if="mediaAsset.image !== null" :src="mediaAsset.image" />
 				<sound-cloud v-if="mediaAsset.soundcloud_embed_html !== ''" :soundcloudEmbedHTML="mediaAsset.soundcloud_embed_html" />
