@@ -121,6 +121,7 @@ export default {
   margin: 50px auto;
   width: fit-content;
   z-index: 10;
+  transition: 0.3s;
 }
 .button-wrapper:hover {
   border: 2px solid #3b8070;
