@@ -64,9 +64,6 @@ export default {
 }
 </script>
 <style scoped>
-.container {
-	height: 50vh;
-}
 .wrapper {
 	display: flex;
 	flex-direction: column;

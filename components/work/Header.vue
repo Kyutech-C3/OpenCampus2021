@@ -186,7 +186,6 @@ export default {
     -webkit-flex-wrap: wrap; /* Safari etc. */
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    justify-content: center;
     margin-bottom: 30px;
     height: auto;
     width: 100%;
