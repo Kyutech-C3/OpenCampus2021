@@ -65,11 +65,17 @@ export default {
 </style>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("../assets/font/InterWeb/Inter-roman.var.woff2?v=3.19") format("woff2");
+}
 
 html {
   font-family:
-    'Inter',
+    'Inter var',
     'YuGothic Medium',
     'Yu Gothic Medium',
     'YuGothic',
@@ -99,7 +105,7 @@ html {
 
 .bold {
   font-family:
-    'Inter',
+    'Inter var',
     'YuGothic Bold',
     'Yu Gothic Bold',
     'YuGothic',
