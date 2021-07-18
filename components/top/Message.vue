@@ -29,6 +29,10 @@
   height: max(18vw, 70px);
   z-index: 10;
   position: absolute;
+  -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .titleLine {
   margin: 0 auto 0 7%;
@@ -48,6 +52,9 @@
   color: #4A4A4A;
   font-size: max(2vw, 13px);
   line-height: max(4vw, 20px);
+}
+.mainContent::selection {
+  background: #4565863d;
 }
 /* スマホ以上 */
 @media screen and (min-width: 481px) {

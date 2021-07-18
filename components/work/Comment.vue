@@ -9,7 +9,7 @@
 				<button class="send-button" type="submit"><font-awesome-icon class="icon" icon="paper-plane"/>送信</button>
 		</form>
 		<p class="title"><font-awesome-icon class="icon" icon="comments"/>コメント</p>
-		<div>
+		<div class="comment-wrapper">
 			<comment :comment_list="preview_comments"/>
 			<comment v-if="is_open" :comment_list="comments"/>
 			<button v-if="comments.length > 0" class="comment-list-opener" @click="SwitchCommentList">{{ is_open_icon }}</button>
@@ -115,12 +115,21 @@ label{
 	background-color: #EEE;
 	border-radius: 3px;
 }
+.comment-wrapper {
+	position: relative;
+}
 .comment-list-opener{
-	width: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	border-radius: 3px;
 	border: 0px #c2c2c2 solid;
 	background-color: #0000;
 	font-weight: bold;
+	cursor: pointer;
+}
+.comment-list-opener:hover {
+	opacity: 0.5;
 }
 .send-button{
 	font-size: 15px;
@@ -129,5 +138,22 @@ label{
 	border-radius: 6px;
 	background-color: #0000;
 	border: 2px #777 solid;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.send-button:hover {
+	background-color: #777;
+	color: white;
+}
+
+.username-form::selection, .comment-form::selection {
+	background: #4565863d;
+}
+
+.title, label, .send-button {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 </style>

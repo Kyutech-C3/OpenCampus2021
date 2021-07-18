@@ -46,9 +46,17 @@ export default {
 .comment-text {
 	padding: 0 5px;
 }
+.comment-text::selection, .comment-name::selection {
+	background: #4565863d;
+}
+
 .comment-date {
 	font-size: 11px;
 	text-align: right;
 	padding: 5px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 </style>

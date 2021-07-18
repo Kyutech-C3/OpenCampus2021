@@ -99,5 +99,9 @@ div {
 	white-space: nowrap;
 	padding-right: 10px;
 	margin-bottom: 3vw;
+  -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 </style>

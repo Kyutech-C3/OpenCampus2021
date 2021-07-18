@@ -27,6 +27,10 @@ header{
   height: 120px;
   text-align: center;
   z-index: 1;
+  -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .menu_bar{
   z-index: 5;

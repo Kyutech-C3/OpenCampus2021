@@ -20,6 +20,10 @@
   height: 100vh;
   position: relative;
   padding: 20vh 6vw 0 6vw;
+  -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .topwrapper:not(.menu) {
