@@ -2,7 +2,7 @@
   <header>
       <Menu class="menu_bar"/>
       <div class="header_content1">
-        <div class="title">C3 Open Campus</div>
+        <a href="/" class="title">C3 Open Campus</a>
       </div>
       <div class="header_content2">
         <div class="year">2021</div>
@@ -50,6 +50,9 @@ header{
 .title {
   color: #fff;
   font-size: 65px;
+  cursor: pointer;
+  /* color: inherit; */
+  text-decoration: none;
 }
 .year {
   color:rgba(255,255,255,0.1);
