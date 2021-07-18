@@ -21,7 +21,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install dependencies
-        run: npm
+        run: npm install
 
       - name: Generate
         run: npm run generate
