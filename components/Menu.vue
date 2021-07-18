@@ -95,7 +95,7 @@ export default {
   position: fixed;
   cursor: pointer;
   z-index: 100;
-  padding: 10px;
+  padding: 29px 10px 10px 10px;
 }
 .icon-bar {
   display: block;
@@ -198,8 +198,7 @@ ul {
 /* スマホ幅 */
 @media screen and (max-width: 480px) {
   .button {
-    top: 10px;
-    left: 10px;
+    padding: 22px 10px 10px 20px;
   }
   .nav-content {
     width: 80%;

@@ -34,7 +34,7 @@ header{
   overflow: hidden;
 }
 .menu_bar{
-  z-index: 5;
+  z-index: 99;
 }
 .header_content1 {
   display: inline-block;
@@ -70,21 +70,24 @@ header{
   }
 }
 @media screen and (max-width: 481px) {
+  header{
+    height: 65px;
+  }
   .title {
     color: #fff;
-    font-size: 30px;
+    font-size: 25px;
   }
   .header_content1 {
-    margin-top: 40px;
+    margin-top: 5%;
   }
   .year {
-    font-size: 100px;
+    font-size: 70px;
   }
   .header_content2 {
     text-align: center;
-    top: 0px;
+    top: -2px;
     right: 0x;
-    padding-right: 5%;
+    padding-right: 15%;
   }
 }
 </style>
