@@ -194,6 +194,7 @@ export default {
     height: auto;
 }
 .work_info {
+    margin-top: 20px;
     margin-left: 20px;
 }
 .member_title {
@@ -228,7 +229,6 @@ export default {
         width: 70%;
     }
     .work_info {
-        margin-top: 20px;
         margin-left: 0px;
         padding-left: 20px;
         width: 30%;
