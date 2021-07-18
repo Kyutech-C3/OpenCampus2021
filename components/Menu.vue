@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrap">
     <!-- ハンバーガーメニューのボタン -->
     <div class="button" @click="ActiveBtn=!ActiveBtn">
       <span class="icon-bar line-1" :class="{'close-1':ActiveBtn}"></span>
@@ -51,6 +51,22 @@
                 </a>
               </div>
             </li>
+            <li>
+              <div class="home">
+                <a href="#0">
+                  <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
+                  YouTubeライブ
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="home">
+                <a href="#0">
+                  <font-awesome-icon class="icon" icon="file-alt" />
+                  アンケート
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
     </transition>
@@ -72,6 +88,9 @@ export default {
 </script>
 
 <style scoped>
+.wrap {
+  z-index: 100;
+}
 .button {
   position: fixed;
   cursor: pointer;
@@ -134,7 +153,7 @@ export default {
 }
 .icon {
   color: white;
-  font-size: 15px;
+  font-size: max(5%, 18px);
 }
 .nav-content li a,
 .nav-content li p {
