@@ -56,6 +56,12 @@ export default {
   }
 }
 
+@media (max-width: 480px) {
+  .root-container {
+    padding:  0 1.5rem;
+  }
+}
+
 </style>
 
 <style>
