@@ -129,5 +129,17 @@ label{
 	border-radius: 6px;
 	background-color: #0000;
 	border: 2px #777 solid;
+	cursor: pointer;
+}
+
+.username-form::selection, .comment-form::selection {
+	background: #4565863d;
+}
+
+.title, label, .send-button {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 </style>
