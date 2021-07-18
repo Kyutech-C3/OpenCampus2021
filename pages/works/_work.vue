@@ -56,7 +56,7 @@ export default {
 }
 @media screen and (max-width: 1300px) {
 	.page-wrapper {
-		width: 90%;
+		width: 100%;
 		margin: auto;
 	}
 }
