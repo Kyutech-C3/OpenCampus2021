@@ -15,12 +15,9 @@ export default {
 }
 </script>
 <style scoped>
-.player {
-	width: 100%;
-	height: 100%;
-}
 .image-asset-container {
 	height: 100%;
+	background-color: black;
 }
 .image {
 	width: 100%;
