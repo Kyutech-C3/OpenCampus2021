@@ -4,17 +4,20 @@
     <div :class="{ 'root-container': true, 'disable-padding': isRootPath }">
       <Nuxt />
     </div>
+    <Footer2 />
     <Footer />
   </div>
 </template>
 <script>
-// import Header from '../components/Header.vue'
+import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
+import Footer2 from '../components/Footer2.vue'
 
 export default {
   components: {
-    // Header,
-    Footer
+    Header,
+    Footer,
+    Footer2
   },
   computed: {
     isRootPath() {
