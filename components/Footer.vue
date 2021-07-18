@@ -50,7 +50,7 @@ footer {
   margin: 0;
   padding: 30px 30px 10px 30px;
   position: relative;
-  z-index: 20;
+  /* z-index: 20; */
 }
 a:hover {
   opacity: 0.5;
