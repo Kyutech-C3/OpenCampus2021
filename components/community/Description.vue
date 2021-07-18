@@ -44,6 +44,8 @@ div{
 .description {
 	font-size: calc(0.5vw + 14px);
 	margin-left: 4%;
+	text-align: justify;
+	text-justify: auto;
 }
 .description::selection{
 	background: #4565863d;
