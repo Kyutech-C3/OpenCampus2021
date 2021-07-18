@@ -110,9 +110,9 @@ export default {
 .label {
 	margin-left: .5rem;
 	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .all-select-button {

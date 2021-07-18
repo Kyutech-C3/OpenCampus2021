@@ -30,9 +30,9 @@
   z-index: 10;
   position: absolute;
   -webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .titleLine {
   margin: 0 auto 0 7%;

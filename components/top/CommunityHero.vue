@@ -93,9 +93,9 @@ export default {
   -webkit-background-clip: text;
   filter: brightness(200%);
   -webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 @media screen and (max-width: 767px) {
   .name {
@@ -110,9 +110,9 @@ export default {
   letter-spacing: 4px;
   line-height: 1.3em;
   -webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 @media screen and (max-width: 767px) {
   .description {

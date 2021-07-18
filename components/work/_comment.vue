@@ -55,8 +55,8 @@ export default {
 	text-align: right;
 	padding: 5px;
 	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 </style>

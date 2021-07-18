@@ -219,9 +219,9 @@ export default {
 }
 .member_title, .title, .created_at, .tag_title, .tags {
     -webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 @media screen and (max-width: 1300px) {
     .header_mid {
