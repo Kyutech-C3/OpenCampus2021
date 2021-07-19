@@ -70,6 +70,11 @@
           </ul>
         </div>
     </transition>
+    <div 
+      v-if="ActiveBtn"
+      class="close-area"
+      @click="ActiveBtn=!ActiveBtn"
+    />
   </div>
 </template>
 
@@ -184,6 +189,11 @@ a {
 ul {
   padding: 0;
   list-style: none;
+}
+.close-area {
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 /* スマホ以上 */
 @media screen and (min-width: 481px) {
