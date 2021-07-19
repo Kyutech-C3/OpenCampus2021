@@ -114,7 +114,7 @@ export default {
 }
 .tag_wrap {
   overflow: hidden;
-  overflow-x: scroll;
+  overflow-x: auto;
   cursor: default;
 }
 .tag_wrap::-webkit-scrollbar {
@@ -135,7 +135,7 @@ export default {
   justify-content: flex-start;
   margin-right: 3px;
   margin-bottom: 4px;
-  
+
 }
 .description {
   position: relative;
