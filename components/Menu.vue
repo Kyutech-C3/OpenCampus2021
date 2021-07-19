@@ -99,7 +99,7 @@ export default {
 .button {
   position: fixed;
   cursor: pointer;
-  z-index: 100;
+  z-index: 105;
   padding: 29px 10px 10px 10px;
 }
 .icon-bar {
