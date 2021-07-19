@@ -8,6 +8,7 @@
 			:description="work_data.description"
 			:card_image="work_data.card_image"
 			:work_id="work_data.id"
+			:work_link="work_data.work_link"
 			:download_link="work_data.download_link"
 			:goods="work_data.goods"
 			:media_assets="work_data.media_assets"
