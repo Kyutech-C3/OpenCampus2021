@@ -169,7 +169,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    min-height: 70px;
+    height: auto;
 }
 .title {
     align-self: center;
