@@ -1,4 +1,4 @@
-export default (context, inject) => {
+(function() {
 	const query = window.location.search
 	console.debug('GitHub Pages Path Solver Loaded...')
 	console.debug('query:', query)
@@ -7,4 +7,4 @@ export default (context, inject) => {
 		console.debug('route:', route)
 		window.history.replaceState(null, null, route)
 	}
-}
+})
