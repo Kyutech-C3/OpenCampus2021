@@ -90,12 +90,17 @@ export default {
 <style scoped>
 .wrap {
   z-index: 100;
+  position: relative;
+  height: 120px;
+  width: 100%;
 }
 .button {
-  position: fixed;
+  position: absolute;
   cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
   z-index: 100;
-  padding: 29px 10px 10px 10px;
 }
 .icon-bar {
   display: block;
@@ -188,7 +193,6 @@ ul {
 /* スマホ以上 */
 @media screen and (min-width: 481px) {
   .button {
-    top: 20px;
     left: 20px;
   }
   .nav-content {
