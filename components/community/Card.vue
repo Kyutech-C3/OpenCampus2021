@@ -82,35 +82,42 @@ export default {
 
 <style scoped>
 .card-link {
-  margin: 10px;
+  margin: 15px;
   text-decoration: none;
   color: #000000 ;
 }
 .card {
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 380px;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.24);
+  transition: 0.3s;
   cursor: pointer;
   overflow: hidden;
 }
+.card:hover {
+  box-shadow: 0 0 20px 2px rgb(0 0 0 / 50%);
+}
 .content {
   position: relative;
-  width: 200px;
-  height: 170px;
+  width: 300px;
+  height: 270px;
   padding: 10px 15px 10px 15px;
   overflow: hidden;
 }
 .thumbnail {
   position: relative;
-  width: 200px;
-  height: 120px;
+  width: 300px;
+  height: 220px;
   object-fit: cover;
 }
 .title {
   font-size: 18px;
   margin-bottom: 5px;
   font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .tag_wrap {
   overflow: hidden;
@@ -139,8 +146,13 @@ export default {
 }
 .description {
   position: relative;
-  word-break: break-all;
   font-size: 12px;
   margin-top: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
 }
 </style>

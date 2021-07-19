@@ -34,18 +34,19 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: space-around;
-  width:880px;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
   margin: auto;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 0px) and (max-width: 700px) {
   .card-list {
-    width:440px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
-}
-@media screen and (max-width: 481px) {
-  .card-list {
-    width:220px;
-  }
-}
+} 
 </style>
