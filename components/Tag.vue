@@ -67,6 +67,8 @@ export default {
 .tag {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
+	white-space: nowrap;
 	align-items: center;
 	padding: 5px 15px;
 	font-size: 1rem;

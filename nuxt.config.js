@@ -12,6 +12,11 @@ export default {
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        ],
+        script: [
+          {
+            src: '/ghpagespathsolver.js'
+          }
         ]
     },
 
@@ -62,5 +67,6 @@ export default {
   googleAnalytics: {
     id: 'G-HT71B54RCT'
   },
-  target: 'static'
+  target: 'static',
+  ssr: false
 }

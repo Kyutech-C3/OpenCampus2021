@@ -48,7 +48,7 @@ footer {
   width: 100%;
   background-color: #28425a;
   margin: 0;
-  padding: 30px 30px 10px 30px;
+  padding: 30px 10vw;
   position: relative;
   /* z-index: 20; */
 }
@@ -77,20 +77,8 @@ a.note {
 	color: white;
 	font-size: 30px;
 }
-#youtube {
-  height: 20px;
-  width: 30px;
-}
-#twitter {
-  height: 25px;
-  width: 30px;
-}
-#up {
-	font-size: 25px;
-	margin-bottom: 5px;
-}
 /* PC/タブレット横 */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   ul {
     display: flex;
     justify-content: baseline;
@@ -105,8 +93,8 @@ a.note {
     margin: 10px 12px 10px 12px;
   }
   #logo {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
   }
   .linkBox {
@@ -169,7 +157,7 @@ a.note {
   }
   .linkBox {
     position: absolute;
-    bottom: 15%;
+    bottom: 25%;
     left: 0;
     right: 0;
     margin: auto;
@@ -179,18 +167,12 @@ a.note {
 	.linkItem {
 		flex-basis: 50px;
 	}
-  #youtube {
-    margin: 10px;
-  }
-  #twitter {
-    margin: 10px;
-  }
   .link-icon {
     font-size: 10px;
     margin-left: 5px;
   }
   button {
-    font-size: 20%;
+    font-size: 10px;
   }
   #returnTop {
     border-radius: 20px/20px;
@@ -205,7 +187,7 @@ a.note {
   .copyRight {
     color: lightgray;
     margin-top: 70px;
-    font-size: 50%;
+    font-size: 8px;
     display: flex;
     justify-content: center;
   }

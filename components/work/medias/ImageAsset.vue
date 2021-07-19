@@ -17,6 +17,7 @@ export default {
 <style scoped>
 .image-asset-container {
 	height: 100%;
+	max-height: 600px;
 	background-color: black;
 }
 .image {

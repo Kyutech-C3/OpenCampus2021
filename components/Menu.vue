@@ -70,6 +70,11 @@
           </ul>
         </div>
     </transition>
+    <div 
+      v-if="ActiveBtn"
+      class="close-area"
+      @click="ActiveBtn=!ActiveBtn"
+    />
   </div>
 </template>
 
@@ -131,7 +136,7 @@ export default {
   background: #4a4a4a;
   pointer-events: auto;
   flex-direction: column;
-  z-index: 99;
+  z-index: 102;
 }
 .slide-enter-active, .slide-leave-active {
   transform: translate(0px, 0px);
@@ -184,6 +189,12 @@ a {
 ul {
   padding: 0;
   list-style: none;
+}
+.close-area {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
 }
 /* スマホ以上 */
 @media screen and (min-width: 481px) {
