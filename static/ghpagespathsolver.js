@@ -7,4 +7,4 @@
 		console.debug('route:', route)
 		window.history.replaceState(null, null, route)
 	}
-})
+})()
