@@ -11,7 +11,7 @@
         <font-awesome-icon :icon="['fab', 'youtube']" class="icon" />
         <div class="hide"><span class="fs14">« </span><span class="up">YouTube生配信中！</span></div>
       </a>
-      <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank" class="link googleform">
+      <a href="https://docs.google.com/forms/d/1yXcS3MLg8UjxieWV-tXcAZeNoG7mz5ArvZouI9RFWTI/edit" target="_blank" class="link googleform">
         <img src="../../static/googleform.png" alt="img">
         <div class="hide"><span class="fs14">« </span><span class="up">アンケート実施中！</span></div>
       </a>

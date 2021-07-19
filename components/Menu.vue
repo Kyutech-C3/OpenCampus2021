@@ -53,15 +53,15 @@
             </li>
             <li>
               <div class="home">
-                <a href="#0">
+                <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw">
                   <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
-                  YouTubeライブ
+                  YouTubeライブ 13:00-16:00
                 </a>
               </div>
             </li>
             <li>
               <div class="home">
-                <a href="#0">
+                <a href="https://docs.google.com/forms/d/1yXcS3MLg8UjxieWV-tXcAZeNoG7mz5ArvZouI9RFWTI/edit">
                   <font-awesome-icon class="icon" icon="file-alt" />
                   アンケート
                 </a>
