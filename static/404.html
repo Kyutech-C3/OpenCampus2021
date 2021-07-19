@@ -3,10 +3,10 @@
 		<meta charset="utf-8">
 		<title>404 Not Found</title>
 		<script>
-			const location = window.location
-			const path = location.href.substr(location.origin.length+1)
+			const _location = window.location
+			const path = location.href.substr(_location.origin.length+1)
 			const url = `${origin}/?p=${encodeURIComponent(path)}}`
-			location.replace(url)
+			_location.replace(url)
 		</script>
 	</head>
 	<body></body>
