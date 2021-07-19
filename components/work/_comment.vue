@@ -45,6 +45,7 @@ export default {
 }
 .comment-text {
 	padding: 0 5px;
+	word-break: break-all;
 }
 .comment-text::selection, .comment-name::selection {
 	background: #4565863d;
