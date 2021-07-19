@@ -37,9 +37,12 @@ header{
   z-index: 99;
 }
 .header_content1 {
-  display: inline-block;
-  margin-top: 20px;
-  padding-right: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 .header_content2 {
   display: inline-block;
@@ -58,18 +61,15 @@ header{
   color:rgba(255,255,255,0.1);
   font-size: 135px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1300px) {
   .header_content1 {
-    padding-right: 0;
+    left: 30%;
   }
 }
 @media screen and (max-width: 700px) {
   .title {
     color: #fff;
     font-size: 40px;
-  }
-  .header_content1 {
-    margin-top: 40px;
   }
 }
 @media screen and (max-width: 481px) {
@@ -79,9 +79,6 @@ header{
   .title {
     color: #fff;
     font-size: 25px;
-  }
-  .header_content1 {
-    margin-top: 5%;
   }
   .year {
     font-size: 70px;
