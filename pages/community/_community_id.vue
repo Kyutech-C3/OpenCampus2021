@@ -61,7 +61,6 @@ export default {
         return this.genre.works
       } else {
         return this.genre.works.filter(work => {
-          //!!this.selectedTags.filter(tag => !!work.tags.filter(t => tag.id === t.id).length).length
           let state = true
           this.selectedTags.forEach(tag => {
             if(!work.tags.find(t => t.id === tag.id)) {
