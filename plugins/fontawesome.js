@@ -20,7 +20,8 @@ import {
 	faLaptopCode,
 	faPalette,
 	faLink,
-	faFileAlt
+	faFileAlt,
+	faExclamationCircle
 } from '@fortawesome/free-solid-svg-icons'
 import { 
 	faYoutube,
@@ -57,7 +58,8 @@ library.add(
 	faLaptopCode,
 	faPalette,
 	faLink,
-	faFileAlt
+	faFileAlt,
+	faExclamationCircle
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

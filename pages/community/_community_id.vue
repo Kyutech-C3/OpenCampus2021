@@ -13,6 +13,12 @@
       <div class="row">
         <card-list :card_items="tagFilteredWorks" />
       </div>
+      <div class="row error-row" v-if="tagFilteredWorks.length === 0" >
+        <div class="error-notfound">
+          <font-awesome-icon class="error-notfound-icon" icon="exclamation-circle" />
+          <div class="bold error-notfound-message">作品が見つかりませんでした</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -54,9 +60,15 @@ export default {
       if(this.selectedTags.length === 0) {
         return this.genre.works
       } else {
-        return this.genre.works.filter(work => (
-          !!this.selectedTags.filter(tag => !!work.tags.filter(t => tag.id === t.id).length).length
-        ))
+        return this.genre.works.filter(work => {
+          let state = true
+          this.selectedTags.forEach(tag => {
+            if(!work.tags.find(t => t.id === tag.id)) {
+              state = false
+            }
+          })
+          return state
+        })
       }
     }
   },
@@ -103,5 +115,22 @@ div {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+.error-row {
+  justify-content: center;
+}
+.error-notfound {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5rem;
+  color: var(--base-color);
+}
+.error-notfound-icon {
+  font-size: 3rem;
+}
+.error-notfound-message {
+  margin-left: .6em;
+  font-size: 1.2rem;
 }
 </style>
