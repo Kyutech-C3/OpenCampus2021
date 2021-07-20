@@ -35,7 +35,7 @@ export default {
         {
           name: "CG",
           description:
-            "コンピュータグラフィックス（英: computer graphics、略称: CG）は、コンピュータを用いて画像を生成する科学技術、及びその技術によって生成される画像のことである。",
+            "CGコミュニティではBlenderやXISMOなどのモデリングソフトを用いて3DモデルやMMDでアニメーションを制作しています。",
           imgUrl:
             "https://simo-c3.github.io/image_url/c3_summer_logo.png",
           linkUrl: "/community/3"
