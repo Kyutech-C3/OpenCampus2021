@@ -208,6 +208,9 @@ export default {
 .description::selection, .member::selection {
     background: #4565863d;
 }
+.description {
+	white-space: pre-wrap;
+}
 .member_title, .title, .created_at, .tag_title, .tags {
     -webkit-user-select: none;
 	-moz-user-select: none;
