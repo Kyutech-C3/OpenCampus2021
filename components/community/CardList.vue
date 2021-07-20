@@ -30,18 +30,9 @@ export default {
 
 <style scoped>
 .card-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: left;
-  align-items: center;
-  width: 100%;
-  max-width: 1320px;
-  margin: auto;
-}
-@media screen and (min-width: 0px) and (max-width: 800px) {
-  .card-list {
-    flex-direction: column;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  row-gap: 50px;
+  column-gap: 50px;
 } 
 </style>

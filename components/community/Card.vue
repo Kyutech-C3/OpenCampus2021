@@ -82,12 +82,10 @@ export default {
 
 <style scoped>
 .card-link {
-  margin: 15px;
   text-decoration: none;
   color: #000000 ;
 }
 .article {
-  width: 300px;
   height: 380px;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.24);
@@ -100,14 +98,13 @@ export default {
 }
 .content {
   position: relative;
-  width: 300px;
   height: 270px;
   padding: 10px 15px 10px 15px;
   overflow: hidden;
 }
 .thumbnail {
   position: relative;
-  width: 300px;
+  width: 100%;
   height: 220px;
   object-fit: cover;
 }
@@ -155,19 +152,4 @@ export default {
   overflow: hidden;
   -webkit-box-orient: vertical;
 }
-@media screen and (min-width: 0px) and (max-width: 800px) {
-  .card-link {
-    width: 95%;
-    margin: 0 0 25px 0;
-  }
-  .article {
-    width: 100%;
-  }
-  .content {
-    width: 100%;
-  }
-  .thumbnail {
-    width: 100%;
-  }
-} 
 </style>
