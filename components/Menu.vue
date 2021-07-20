@@ -53,7 +53,7 @@
             </li>
             <li>
               <div class="home">
-                <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw">
+                <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_brank">
                   <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
                   YouTubeライブ 13:00-16:00
                 </a>
@@ -61,7 +61,7 @@
             </li>
             <li>
               <div class="home">
-                <a href="https://docs.google.com/forms/d/1yXcS3MLg8UjxieWV-tXcAZeNoG7mz5ArvZouI9RFWTI/edit">
+                <a href="https://docs.google.com/forms/d/1yXcS3MLg8UjxieWV-tXcAZeNoG7mz5ArvZouI9RFWTI/edit" target="_brank">
                   <font-awesome-icon class="icon" icon="file-alt" />
                   アンケート
                 </a>
