@@ -2,7 +2,7 @@
   <div class="community-hero" :style="styles">
     <h1 class="name">{{ item.name }}</h1>
     <div class="description">{{ item.description }}</div>
-    <a class="button-wrapper" :href="item.linkUrl">
+    <a class="button-wrapper" :href="item.linkUrl" :title="item.name">
       <span class="button-text">もっとみる→</span>
     </a>
   </div>
