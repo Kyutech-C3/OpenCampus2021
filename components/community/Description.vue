@@ -27,6 +27,7 @@ div{
 }
 .allWrapper {
 	margin: 0;
+	width: 100%;
 }
 .name {
 	color: var(--base-color);
