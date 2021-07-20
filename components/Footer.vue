@@ -2,18 +2,18 @@
   <footer>
     <ul>
       <li>
-        <a href="https://oc2021.compositecomputer.club/">
+        <a href="https://oc2021.compositecomputer.club/" target="_blank">
           <img id="logo" src="../static/Footer/C3logo.png" alt="logo"/>
         </a>
       </li>
       <div class="linkBox">
-        <a class="linkItem" href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw">
+        <a class="linkItem" href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank">
           <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
         </a>
-        <a class="linkItem" href="https://twitter.com/c3_kyutech?s=20">
+        <a class="linkItem" href="https://twitter.com/c3_kyutech?s=20" target="_blank">
           <font-awesome-icon class="icon" :icon="['fab', 'twitter']" />
         </a>
-        <a class="note" href="https://note.com/c3noteproject"><img src="../static/Footer/note-logo.svg"></a>
+        <a class="note" href="https://note.com/c3noteproject" target="_blank"><img src="../static/Footer/note-logo.svg"></a>
       </div>
       <li>
         <a
