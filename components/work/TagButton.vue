@@ -1,5 +1,5 @@
 <template>
-	<div class="button" @click="$emit('click')">
+	<div class="button" :class="{enabled: enabled}" @click="$emit('click')">
 		<Tag :tag="tagData" :small="small" />
 	</div>
 </template>
@@ -18,6 +18,10 @@ export default {
 		small: {
 			type: Boolean,
 			default: () => (false)
+		},
+		enabled: {
+			type: Boolean,
+			default: () => (false)
 		}
 	},
 	computed: {
@@ -32,6 +36,10 @@ export default {
 </script>
 <style scoped>
 .button {
+	opacity: .4;
+}
+.enabled {
 	cursor: pointer;
+	opacity: 1;
 }
 </style>
