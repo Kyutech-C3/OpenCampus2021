@@ -26,4 +26,9 @@ export default {
   margin-right: 0.5rem;
 	color: #000000;
 }
+.bold {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 </style>
