@@ -155,4 +155,15 @@ export default {
   overflow: hidden;
   -webkit-box-orient: vertical;
 }
+@media screen and (max-width: 370px) {
+  .card {
+    width: 230px;
+  }
+  .content {
+    width: 230px;
+  }
+  .thumbnail {
+    width: 230px;
+  }
+}
 </style>
