@@ -27,6 +27,9 @@ export default {
 		Header: Header,
 		Footer: Footer
 	},
+	head: {
+		title: '作品詳細'
+	},
 	data() {
 		return {
 			work_data: {}
