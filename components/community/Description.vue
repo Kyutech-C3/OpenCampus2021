@@ -32,7 +32,7 @@ div{
 .name {
 	color: var(--base-color);
 	background:linear-gradient(transparent 60%, var(--highlight-color) 60%);
-	font-size: calc(6.5vw + 10px);
+	font-size: calc(6.5vw + 4px);
 	display: inline-block;
 	white-space: nowrap;
 	padding-right: 10px;
@@ -41,6 +41,8 @@ div{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	max-width: 100%;
+	resize: both;
 }
 .description {
 	font-size: calc(0.5vw + 14px);
