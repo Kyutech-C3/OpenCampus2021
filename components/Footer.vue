@@ -54,6 +54,9 @@ footer {
   position: relative;
   /* z-index: 20; */
 }
+a::selection, div::selection, button::selection {
+  background: #4565863d;
+}
 a:hover {
   opacity: 0.5;
 }
