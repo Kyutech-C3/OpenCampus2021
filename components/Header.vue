@@ -2,7 +2,7 @@
   <header>
       <Menu class="menu_bar"/>
       <div class="header_content1">
-        <a href="/" class="title">C3 Open Campus</a>
+        <a href="/" class="title" title="HOME">C3 Open Campus</a>
       </div>
       <div class="header_content2">
         <div class="year">2021</div>
