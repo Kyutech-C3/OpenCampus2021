@@ -4,7 +4,7 @@
             <font-awesome-icon :icon="['fab', 'youtube']" class="icon"/>
             <span class="title">&laquo; YouTubeでライブ配信中！</span>
         </a>
-        <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank" class="link" id="survey">
+        <a href="https://docs.google.com/forms/d/1yXcS3MLg8UjxieWV-tXcAZeNoG7mz5ArvZouI9RFWTI/edit" target="_blank" class="link" id="survey">
             <font-awesome-icon :icon="['fas', 'file-alt']" class="icon"/>
             <span class="title">&laquo; アンケート実施中！</span>
         </a>
