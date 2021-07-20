@@ -138,5 +138,6 @@ export default {
 }
 .tag-selector-header >>> .vs__dropdown-menu {
 	width: auto;
+	z-index: 10;
 }
 </style>
