@@ -101,7 +101,7 @@ div {
   flex-direction: column;
   margin: auto;
   margin-top: 2rem;
-  max-width: 1320px;
+  max-width: 1500px;
 }
 .row {
   display: flex;
