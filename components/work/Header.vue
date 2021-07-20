@@ -10,7 +10,9 @@
             </div>
         </dev>
         <div class="header_mid">
-            <viewer class="viewer" :mediaAssets="media_assets" />
+            <div class="viewer">
+                <viewer :mediaAssets="media_assets" />
+            </div>
             <div class="work_info">
                 <div class="member_title">
                     <font-awesome-icon :icon="['fas', 'users']" />
@@ -184,15 +186,15 @@ export default {
 }
 .header_mid {
     display: flex;
-    -webkit-flex-wrap: wrap; /* Safari etc. */
-    -ms-flex-wrap: wrap; /* IE10 */
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-bottom: 30px;
     height: auto;
     width: 100%;
 }
 .viewer {
-    height: auto;
+    width: 100%;
 }
 .work_info {
     margin-top: 20px;
