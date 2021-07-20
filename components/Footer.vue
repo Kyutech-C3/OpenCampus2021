@@ -15,7 +15,7 @@
         </a>
         <a class="note" href="https://note.com/c3noteproject" target="_blank"><img src="../static/Footer/note-logo.svg"></a>
       </div>
-      <li>
+      <li class="text-link-box">
         <a
           class="link"
           href="https://compositecomputer.club/"
@@ -73,7 +73,7 @@ button:hover {
   align-items: center;
 }
 .linkItem {
-  width: 60px;
+  width: 50px;
   flex-shrink: 0;
   text-align: center;
 }
@@ -85,6 +85,7 @@ a.note {
 }
 .note img {
   width: 60px;
+  margin: -10px;
 }
 .icon {
 	color: white;
@@ -133,7 +134,7 @@ a.note {
     color: lightgray;
     position: absolute;
     right: 8%;
-    bottom: 8%;
+    bottom: 30px;
   }
 }
 /* スマホ/タブレット縦 */
@@ -161,17 +162,23 @@ a.note {
   a.link {
     margin: auto;
   }
+  .text-link-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
   .link {
-    padding-bottom: 5px;
-    border-bottom: solid 0.5px lightgray;
+    padding-bottom: 7px;
+    border-bottom: solid 0.5px rgba(255, 255, 255, 0.8);
+    display: inline-block;
   }
   .linkBox {
     position: absolute;
-    bottom: 25%;
+    bottom: 23%;
     left: 0;
     right: 0;
     margin: auto;
-    width: 40%;
   }
   .link-icon {
     font-size: 10px;
@@ -193,7 +200,7 @@ a.note {
   .copyRight {
     color: lightgray;
     margin-top: 70px;
-    font-size: 8px;
+    font-size: 12px;
     display: flex;
     justify-content: center;
   }
