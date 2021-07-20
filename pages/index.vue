@@ -17,6 +17,10 @@ import Menu from "../components/Menu.vue";
 
 export default {
   components: { Top, AboutC3, CommunitiesHero, Message, Menu},
+  head: {
+    titleTemplate: null,
+    title: 'C3 OpenCampus2021'
+  },
   data() {
     return {
       items: [
