@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="workPath" class="card-link">
+  <div @click='$router.push(workPath)' class="card-link">
     <article class="card">
       <img :src="card_image" alt="thumbnail" title="thumbnail" class="thumbnail"/>
       <div class="tag_viewer1" v-if="isHoverFlag">
@@ -20,7 +20,7 @@
           <div class="description">{{description}}</div>
       </div>
     </article>
-  </nuxt-link>
+  </div>
 </template>
 
 <script>
