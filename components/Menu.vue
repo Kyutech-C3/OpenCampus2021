@@ -12,7 +12,7 @@
           <ul>
             <li>
               <div class="home">
-                <a href="/">
+                <a href="/" title="HOME">
                   <font-awesome-icon class="icon" icon="home" />
                   HOME
                 </a>
