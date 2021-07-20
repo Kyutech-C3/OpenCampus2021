@@ -21,7 +21,7 @@
             <li><p>作品を見る</p></li>
             <li>
               <div class="list">
-                <a :href="linkUrl2">
+                <a :href="linkUrl2" title="Game">
                   <font-awesome-icon class="icon" icon="gamepad" />
                   GAME
                 </a>
@@ -29,7 +29,7 @@
             </li>
             <li>
               <div class="list">
-                <a :href="linkUrl3">
+                <a :href="linkUrl3" title="CG">
                   <font-awesome-icon class="icon" :icon="['far', 'images']" />
                   CG
                 </a>
@@ -37,7 +37,7 @@
             </li>
             <li>
               <div class="list">
-                <a :href="linkUrl1">
+                <a :href="linkUrl1" title="Hack">
                   <font-awesome-icon class="icon" icon="laptop-code" />
                   HACK
                 </a>
@@ -45,15 +45,15 @@
             </li>
             <li>
               <div class="list">
-                <a :href="linkUrl4">
-                  <font-awesome-icon class="icon" icon="palette" />
+                <a :href="linkUrl4" title="Media_art">
+                  <font-awesome-icon class="icon" icon="palette"/>
                   MEDIA_ART
                 </a>
               </div>
             </li>
             <li>
               <div class="home">
-                <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_brank">
+                <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_brank" title="YouTube生配信中！ 13:00-16:00-">
                   <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
                   YouTubeライブ 13:00-16:00
                 </a>
@@ -61,7 +61,7 @@
             </li>
             <li>
               <div class="home">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKmF9kHCJQNp-oVhKxrIaOjvYl6q-3P6GfmolNs7nuULYYYA/viewform" target="_brank">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKmF9kHCJQNp-oVhKxrIaOjvYl6q-3P6GfmolNs7nuULYYYA/viewform" target="_brank" title="アンケート">
                   <font-awesome-icon class="icon" icon="file-alt" />
                   アンケート
                 </a>
