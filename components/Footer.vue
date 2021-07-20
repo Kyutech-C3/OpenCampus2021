@@ -2,9 +2,9 @@
   <footer>
     <ul>
       <li>
-        <a href="https://oc2021.compositecomputer.club/"
-          ><img id="logo" src="../static/Footer/C3logo.png" alt="logo"
-        /></a>
+        <a href="https://oc2021.compositecomputer.club/">
+          <img id="logo" src="../static/Footer/C3logo.png" alt="logo"/>
+        </a>
       </li>
       <div class="linkBox">
         <a class="linkItem" href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw">
@@ -100,7 +100,7 @@ a.note {
     list-style: none;
   }
   li {
-    margin: 0 15px;
+    margin: 0px;
   }
   a {
     margin: 10px 12px 10px 12px;
