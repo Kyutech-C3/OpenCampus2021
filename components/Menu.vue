@@ -61,7 +61,7 @@
             </li>
             <li>
               <div class="home">
-                <a href="https://docs.google.com/forms/d/1yXcS3MLg8UjxieWV-tXcAZeNoG7mz5ArvZouI9RFWTI/edit" target="_brank">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKmF9kHCJQNp-oVhKxrIaOjvYl6q-3P6GfmolNs7nuULYYYA/viewform" target="_brank">
                   <font-awesome-icon class="icon" icon="file-alt" />
                   アンケート
                 </a>
