@@ -4,6 +4,7 @@
       :href="download_link"
       target="_blank"
       class="download_link"
+      title="ダウンロード"
       >
         <font-awesome-icon :icon="['fas', 'file-download']" id="fa"/>
         ダウンロード
