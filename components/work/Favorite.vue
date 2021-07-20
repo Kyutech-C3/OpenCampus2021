@@ -9,6 +9,8 @@
 </template>
 
 <script>
+const FAVORITE_WORK_IDS_KEY = 'favorited_work_ids'
+
 export default {
   props: {
     work_id: {
@@ -40,13 +42,31 @@ export default {
   //     })
   //   })
   // },
-  mounted () {
+  created () {
+    this.likedFlag = this.hasFavorited()
     this.$nextTick( function () {
-      console.log(this.goods);
       this.likeSum = this.goods;
     })
   },
   methods: {
+    hasFavorited() {
+      const favoritedWorkIDsStr = localStorage.getItem(FAVORITE_WORK_IDS_KEY)
+      if(favoritedWorkIDsStr === null) return false
+      const favoritedWorkIDs = favoritedWorkIDsStr.split(',')
+      return !!favoritedWorkIDs.find(id => id === this.work_id.toString())
+    },
+    setFavoritedToLocalstorage() {
+      const favoritedWorkIDsStr = localStorage.getItem(FAVORITE_WORK_IDS_KEY)
+      let favoritedWorkIDs = []
+      if(favoritedWorkIDsStr !== null) {
+        favoritedWorkIDs = favoritedWorkIDsStr.split(',')
+      }
+
+      if(!favoritedWorkIDs.find(id => id === this.work_id)) {
+        favoritedWorkIDs.push(this.work_id.toString())
+        localStorage.setItem(FAVORITE_WORK_IDS_KEY, favoritedWorkIDs.join(','))
+      }
+    },
     submitFavo() {
       console.log(this.likedFlag);
       let payload = {
@@ -55,6 +75,7 @@ export default {
       this.$axios.post('works/' + String(this.work_id) + '/goods/', payload)
       .then((res) => {
         this.likeSum = res.data.goods;
+        this.setFavoritedToLocalstorage()
       })
       .catch((err) => {
         alert(err);
