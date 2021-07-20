@@ -136,4 +136,7 @@ export default {
 .tag-select {
 	margin-left: .5rem;
 }
+.tag-selector-header >>> .vs__dropdown-menu {
+	width: auto;
+}
 </style>
