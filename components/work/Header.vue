@@ -33,6 +33,7 @@
                 <tag-list :tags="tags" class="tags" />
             </div>
         </div>
+        <work-link/>
         <div class="header_bottom">
             <div class="description">{{description}}</div>
         </div>
