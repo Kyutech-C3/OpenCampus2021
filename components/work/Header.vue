@@ -21,10 +21,6 @@
                 <div class="member">
                     {{team.name}}
                 </div>
-                <div class="created_at">
-                    <font-awesome-icon :icon="['fas', 'redo']" />
-                    <span>{{ getDate(created_at) }}</span>
-                </div>
 
                 <work-link v-if="work_link" :to="work_link" />
 
@@ -128,7 +124,7 @@ export default {
         },
         work_id: {
             type: Number,
-            require:true,
+            require: true,
         },
         work_link: {
             type: String,
@@ -136,8 +132,8 @@ export default {
         },
         download_link: {
             type: String,
-            required:true,
-            default: "a"
+            required: true,
+            default: null
         },
         goods: {
             type: Number,
@@ -148,18 +144,9 @@ export default {
             type: Array,
             required: true
         },
-        created_at: {
-            type: String,
-            required: true,
-            default: "2021-07-24T16:29:49.212Z"
-        }
     },
     methods: {
-		getDate(datetime) {
-			let formatted_datetime = new Date(datetime);
-			return `${formatted_datetime.getFullYear()}/${this.zeroPadding(formatted_datetime.getMonth()+1, 2)}/${this.zeroPadding(formatted_datetime.getDate(), 2)} ${this.zeroPadding(formatted_datetime.getHours(), 2)}:${this.zeroPadding(formatted_datetime.getMinutes(), 2)}:${this.zeroPadding(formatted_datetime.getSeconds(), 2)}`
-		},
-		zeroPadding(num,length) {
+		zeroPadding(num, length) {
 			return ('0000000000' + num).slice(-length);
 		}
 	}
