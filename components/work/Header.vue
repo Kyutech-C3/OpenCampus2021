@@ -3,7 +3,6 @@
         <dev class="header_top">
             <div class="header_left">
                 <span class="title">{{title}}</span>
-                <download :download_link="download_link" class="download" v-if="download_link != ull"/>
             </div>
             <div class="l">
                 <favorite :work_id="work_id" :goods="goods" class="favorite"/>
@@ -14,16 +13,15 @@
                 <viewer :mediaAssets="media_assets" />
             </div>
             <div class="work_info">
+                <download :download_link="download_link" class="download" v-if="download_link != ull"/>
                 <div class="member_title">
                     <font-awesome-icon :icon="['fas', 'users']" />
-                    <span>メンバー</span>
+                    <span>制作者</span>
                 </div>
                 <div class="member">
                     {{team.name}}
                 </div>
-
                 <work-link v-if="work_link" :to="work_link" />
-
                 <div class="tag_title">
                     <font-awesome-icon :icon="['fas', 'tags']" />
                     <span>タグ</span>
@@ -167,9 +165,7 @@ export default {
     font-weight: bold;
 }
 .download {
-    align-self: center;
-    margin-left: 10px;
-
+    font-size: 20px;
 }
 .header_mid {
     display: flex;
@@ -186,9 +182,12 @@ export default {
 .work_info {
     margin-top: 20px;
     margin-left: 20px;
+    width: 100%;
+    height: auto;
 }
 .member_title {
-    font-size: 15px;
+    font-size: 20px;
+    margin-top: 20px;
 }
 .member {
     font-size: 17px;
@@ -197,6 +196,7 @@ export default {
 }
 .tag_title {
     margin-bottom: 15px;
+    font-size: 20px;
 }
 .created_at {
     font-size: 20px;
@@ -228,23 +228,21 @@ export default {
         height: auto;
     }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
     .viewer {
         width: 100%;
     }
     .work_info {
         width: 100%;
         height: auto;
+        margin-right: 20px;
     }
 }
 @media screen and (max-width: 481px) {
     .viewer {
         width: 100%;
     }
-    .work_info {
-        width: 100%;
-        height: auto;
-    }
+
 }
 
 .viewer_mock {
