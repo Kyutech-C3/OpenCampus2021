@@ -1,7 +1,6 @@
 <template>
   <div class="card-list">
     <card
-      class="card"
       v-for="card_item in card_items"
       :title="card_item.title"
       :team="card_item.team"
@@ -40,23 +39,9 @@ export default {
   max-width: 1320px;
   margin: auto;
 }
-@media screen and (max-width: 1450px) {
-  .card-list {
-    width: 990px;
-  }
-}
-@media screen and (max-width: 1150px) {
-  .card-list {
-    width: 660px;
-  }
-}
 @media screen and (min-width: 0px) and (max-width: 800px) {
   .card-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
   }
 } 
 </style>

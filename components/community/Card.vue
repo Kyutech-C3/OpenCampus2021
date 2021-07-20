@@ -1,6 +1,6 @@
 <template>
   <div @click="$router.push(workPath)" class="card-link">
-    <article class="card">
+    <article class="article">
       <img :src="card_image" alt="thumbnail" title="thumbnail" class="thumbnail"/>
       <div class="tag_viewer1" v-if="isHoverFlag">
       </div>
@@ -86,7 +86,7 @@ export default {
   text-decoration: none;
   color: #000000 ;
 }
-.card {
+.article {
   width: 300px;
   height: 380px;
   border-radius: 10px;
@@ -95,7 +95,7 @@ export default {
   cursor: pointer;
   overflow: hidden;
 }
-.card:hover {
+.article:hover {
   box-shadow: 0 0 20px 2px rgb(0 0 0 / 50%);
 }
 .content {
@@ -155,15 +155,19 @@ export default {
   overflow: hidden;
   -webkit-box-orient: vertical;
 }
-@media screen and (max-width: 370px) {
-  .card {
-    width: 230px;
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .card-link {
+    width: 95%;
+    margin: 0 0 25px 0;
+  }
+  .article {
+    width: 100%;
   }
   .content {
-    width: 230px;
+    width: 100%;
   }
   .thumbnail {
-    width: 230px;
+    width: 100%;
   }
-}
+} 
 </style>

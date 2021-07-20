@@ -101,7 +101,7 @@ div {
   flex-direction: column;
   margin: auto;
   margin-top: 2rem;
-  max-width: 1500px;
+  max-width: 1320px;
 }
 .row {
   display: flex;
@@ -138,4 +138,19 @@ div {
   margin-left: .6em;
   font-size: 1.2rem;
 }
+@media screen and (max-width: 1450px) {
+  .container {
+    width: 990px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .container {
+    width: 660px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+} 
 </style>
