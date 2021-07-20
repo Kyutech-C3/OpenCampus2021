@@ -58,11 +58,11 @@ export default {
 .community-hero:before {
   content: "";
   background: inherit;
-  -webkit-filter: blur(4px);
-  -moz-filter: blur(4px);
-  -o-filter: blur(4px);
-  -ms-filter: blur(4px);
-  filter: blur(4px);
+  -webkit-filter: blur(4px) brightness(60%);
+  -moz-filter: blur(4px) brightness(60%);
+  -o-filter: blur(4px) brightness(60%);
+  -ms-filter: blur(4px) brightness(60%);
+  filter: blur(4px) brightness(60%);
   position: absolute;
   top: -5px;
   left: -5px;
@@ -79,7 +79,7 @@ export default {
 
 .name {
   font-size: 12vw;
-  color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.15);
   padding-top: 60px;
   padding-left: 100px;
   position: absolute;
