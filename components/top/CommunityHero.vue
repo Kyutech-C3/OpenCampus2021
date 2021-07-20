@@ -78,7 +78,7 @@ export default {
 }
 
 .name {
-  font-size: 12vw;
+  font-size: clamp(90px, 12vw, 231px);
   color: rgba(255, 255, 255, 0.15);
   padding-top: 60px;
   padding-left: 100px;
@@ -105,7 +105,7 @@ export default {
 }
 
 .description {
-  font-size: 2vw;
+  font-size: clamp(15px, 2vw, 39px);
   margin: 20% 10% 0 30%;
   letter-spacing: 4px;
   line-height: 1.3em;
