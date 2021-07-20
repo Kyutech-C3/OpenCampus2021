@@ -53,7 +53,7 @@
             </li>
             <li>
               <div class="home">
-                <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_brank" title="YouTube生配信中！ 13:00-16:00-">
+                <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_brank" title="YouTube生配信中！ 13:00-16:00">
                   <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
                   YouTubeライブ 13:00-16:00
                 </a>
