@@ -7,11 +7,11 @@
         <span class="fri ss01">23</span><span class="blank">_</span>
       </div>
       <div class="scroll cv05" @click="scroll">scroll</div>
-      <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank" class="link youtube">
+      <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank" title="YouTube生配信中！ 13:00-16:00-" class="link youtube">
         <font-awesome-icon :icon="['fab', 'youtube']" class="icon" />
         <div class="hide"><span class="fs14">« </span><span class="up">YouTube生配信中！</span></div>
       </a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKmF9kHCJQNp-oVhKxrIaOjvYl6q-3P6GfmolNs7nuULYYYA/viewform" target="_blank" class="link googleform">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKmF9kHCJQNp-oVhKxrIaOjvYl6q-3P6GfmolNs7nuULYYYA/viewform" target="_blank" title="アンケート" class="link googleform">
         <img src="../../static/googleform.png" alt="img">
         <div class="hide"><span class="fs14">« </span><span class="up">アンケート実施中！</span></div>
       </a>
