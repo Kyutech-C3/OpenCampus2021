@@ -2,24 +2,25 @@
   <footer>
     <ul>
       <li>
-        <a href="https://oc2021.compositecomputer.club/" target="_blank">
+        <a href="https://oc2021.compositecomputer.club/" target="_blank" title="OC2021">
           <img id="logo" src="../static/Footer/C3logo.png" alt="logo"/>
         </a>
       </li>
       <div class="linkBox">
-        <a class="linkItem" href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank">
+        <a class="linkItem" href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank" title="C3 YouTube Channel">
           <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
         </a>
-        <a class="linkItem" href="https://twitter.com/c3_kyutech?s=20" target="_blank">
+        <a class="linkItem" href="https://twitter.com/c3_kyutech?s=20" target="_blank" title="C3 Twitter">
           <font-awesome-icon class="icon" :icon="['fab', 'twitter']" />
         </a>
-        <a class="note" href="https://note.com/c3noteproject" target="_blank"><img src="../static/Footer/note-logo.svg"></a>
+        <a class="note" href="https://note.com/c3noteproject" target="_blank" title="C3 note"><img src="../static/Footer/note-logo.svg"></a>
       </div>
       <li class="text-link-box">
         <a
           class="link"
           href="https://compositecomputer.club/"
           target="_blank"
+          title="C3 Official Website"
         >
           C3 Official Website<font-awesome-icon class="link-icon" icon="external-link-alt" />
         </a>
@@ -28,6 +29,7 @@
           class="link"
           href="https://www.iizuka.kyutech.ac.jp/"
           target="_blank"
+          title="Kyutech HP"
         >
           情報工学部<font-awesome-icon class="link-icon" icon="external-link-alt" />
         </a>
