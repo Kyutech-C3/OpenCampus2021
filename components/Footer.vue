@@ -8,12 +8,12 @@
       </li>
       <div class="linkBox">
         <a class="linkItem" href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw">
-					<font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
-				</a>
-        <a class="linkItem" href="https://twitter.com/c3_kyutech?s=20">
-					<font-awesome-icon class="icon" :icon="['fab', 'twitter']" />
+          <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
         </a>
-        <a class="note linkItem" href="https://note.com/c3noteproject">note</a>
+        <a class="linkItem" href="https://twitter.com/c3_kyutech?s=20">
+          <font-awesome-icon class="icon" :icon="['fab', 'twitter']" />
+        </a>
+        <a class="note" href="https://note.com/c3noteproject"><img src="../static/Footer/note-logo.svg"></a>
       </div>
       <li>
         <a
@@ -67,11 +67,24 @@ button:hover {
   justify-content: baseline;
   align-items: center;
 }
+.linkBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.linkItem {
+  width: 60px;
+  flex-shrink: 0;
+  text-align: center;
+}
 a.note {
   color: white;
 	text-decoration: none;
 	/*margin: auto 8px;*/
 	font-size: 18px;
+}
+.note img {
+  width: 60px;
 }
 .icon {
 	color: white;
@@ -96,9 +109,6 @@ a.note {
     height: 70px;
     width: 70px;
     border-radius: 50%;
-  }
-  .linkBox {
-    display: flex;
   }
   .link {
     display: flex;
@@ -161,12 +171,8 @@ a.note {
     left: 0;
     right: 0;
     margin: auto;
-    display: flex;
-    justify-content: center;
+    width: 40%;
   }
-	.linkItem {
-		flex-basis: 50px;
-	}
   .link-icon {
     font-size: 10px;
     margin-left: 5px;
