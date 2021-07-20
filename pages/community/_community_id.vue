@@ -34,6 +34,9 @@ export default {
     CardList,
     Description,
   },
+	head: {
+		title: '作品一覧'
+	},
   data() {
     return {
       // card_items: card_items,

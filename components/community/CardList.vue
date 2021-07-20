@@ -37,10 +37,20 @@ export default {
   justify-content: left;
   align-items: center;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1320px;
   margin: auto;
 }
-@media screen and (min-width: 0px) and (max-width: 700px) {
+@media screen and (max-width: 1450px) {
+  .card-list {
+    width: 990px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .card-list {
+    width: 660px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
   .card-list {
     display: flex;
     flex-direction: row;

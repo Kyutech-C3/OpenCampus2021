@@ -4,7 +4,7 @@
             <font-awesome-icon :icon="['fab', 'youtube']" class="icon"/>
             <span class="title">&laquo; YouTubeでライブ配信中！</span>
         </a>
-        <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank" class="link" id="survey">
+        <a href="https://docs.google.com/forms/d/1yXcS3MLg8UjxieWV-tXcAZeNoG7mz5ArvZouI9RFWTI/edit" target="_blank" class="link" id="survey">
             <font-awesome-icon :icon="['fas', 'file-alt']" class="icon"/>
             <span class="title">&laquo; アンケート実施中！</span>
         </a>
@@ -14,6 +14,7 @@
 <style scoped>
 .footer2 {
     display: flex;
+    width: 100%;
     height: 158px;
     background-color: rgb(233, 233, 233);
 }
@@ -25,11 +26,11 @@
     color: rgb(116, 116, 116);
 }
 .link:hover {
-    color: rgb(0, 0, 0);
+    opacity: 0.5;
+    transition: 0.3s;
 }
 #youtube {
     justify-content: flex-end;
-    margin-right: 60px;
 }
 #survey {
     margin-left: 60px;
@@ -39,12 +40,12 @@
     font-size: 32px;
 }
 #youtube .icon {
-    width: 60px;
-    height: auto;
+    font-size: 60px;
+    color: red;
 }
 #survey .icon {
-    width: 40px;
-    height: auto;
+    font-size: 55px;
+    color: #7347b8;
 }
 @media screen and (max-width: 1200px) {
     .footer2 {
@@ -76,29 +77,29 @@
         margin-left: 10px;
     }
     #youtube .icon {
-        width: 50px;
-        height: auto;
+        font-size: 30px;
     }
     #survey .icon {
-        width: 30px;
-        height: auto;
+        font-size: 30px;
     }
 }
 @media screen and (max-width: 481px) {
     .footer2 {
-        height: 200px;
+        height: 90px;
     }
     .title {
-        font-size: 20px;
+        font-size: 15px;
         margin-left: 10px;
     }
+    #youtube, #survey {
+        padding: 10px;
+        margin: 0;
+    }
     #youtube .icon {
-        width: 40px;
-        height: auto;
+        font-size: 20px;
     }
     #survey .icon {
-        width: 25px;
-        height: auto;
+        font-size: 20px;
     }
 }
 </style>

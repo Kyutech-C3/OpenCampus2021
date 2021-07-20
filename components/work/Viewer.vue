@@ -75,3 +75,15 @@ export default {
 	text-align: center;
 }
 </style>
+
+<style>
+.hooper-next svg, .hooper-prev svg {
+	width: 45px;
+	height: 45px;
+	fill: rgba(0, 0, 0, 0.5);
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.hooper-next svg:hover, .hooper-prev svg:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+</style>

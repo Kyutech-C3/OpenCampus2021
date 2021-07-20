@@ -10,7 +10,9 @@
             </div>
         </dev>
         <div class="header_mid">
-            <viewer class="viewer" :mediaAssets="media_assets" />
+            <div class="viewer">
+                <viewer :mediaAssets="media_assets" />
+            </div>
             <div class="work_info">
                 <div class="member_title">
                     <font-awesome-icon :icon="['fas', 'users']" />
@@ -18,10 +20,6 @@
                 </div>
                 <div class="member">
                     {{team.name}}
-                </div>
-                <div class="created_at">
-                    <font-awesome-icon :icon="['fas', 'redo']" />
-                    <span>{{ getDate(created_at) }}</span>
                 </div>
 
                 <work-link v-if="work_link" :to="work_link" />
@@ -126,7 +124,7 @@ export default {
         },
         work_id: {
             type: Number,
-            require:true,
+            require: true,
         },
         work_link: {
             type: String,
@@ -134,8 +132,8 @@ export default {
         },
         download_link: {
             type: String,
-            required:true,
-            default: "a"
+            required: true,
+            default: null
         },
         goods: {
             type: Number,
@@ -146,18 +144,9 @@ export default {
             type: Array,
             required: true
         },
-        created_at: {
-            type: String,
-            required: true,
-            default: "2021-07-24T16:29:49.212Z"
-        }
     },
     methods: {
-		getDate(datetime) {
-			let formatted_datetime = new Date(datetime);
-			return `${formatted_datetime.getFullYear()}/${this.zeroPadding(formatted_datetime.getMonth()+1, 2)}/${this.zeroPadding(formatted_datetime.getDate(), 2)} ${this.zeroPadding(formatted_datetime.getHours(), 2)}:${this.zeroPadding(formatted_datetime.getMinutes(), 2)}:${this.zeroPadding(formatted_datetime.getSeconds(), 2)}`
-		},
-		zeroPadding(num,length) {
+		zeroPadding(num, length) {
 			return ('0000000000' + num).slice(-length);
 		}
 	}
@@ -184,15 +173,15 @@ export default {
 }
 .header_mid {
     display: flex;
-    -webkit-flex-wrap: wrap; /* Safari etc. */
-    -ms-flex-wrap: wrap; /* IE10 */
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-bottom: 30px;
     height: auto;
     width: 100%;
 }
 .viewer {
-    height: auto;
+    width: 100%;
 }
 .work_info {
     margin-top: 20px;
@@ -218,6 +207,9 @@ export default {
 }
 .description::selection, .member::selection {
     background: #4565863d;
+}
+.description {
+	white-space: pre-wrap;
 }
 .member_title, .title, .created_at, .tag_title, .tags {
     -webkit-user-select: none;

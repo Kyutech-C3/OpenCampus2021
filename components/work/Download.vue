@@ -24,6 +24,7 @@ export default {
 <style scoped>
 .download_link {
   color: rgba(0, 0, 0, 0.4);
+  font-size: 30px;
 }
 .download_link:hover {
   color: rgb(0, 0, 0);
