@@ -2,7 +2,6 @@
   <div class="wrap">
     <div class="titleWrap">
       <div class="titleContent">Message</div>
-      <div class="titleLine"></div>
     </div>
     <div class="main">
       <div class="mainContent">
@@ -21,30 +20,24 @@
 }
 .titleWrap {
   position: relative;
-  height: max(18vw, 70px);
+  padding: 5vh 0 2vh 0;
 }
 .titleContent {
-  margin: 0 auto 0 8%;
+  padding: 0 0.1em;
   color: #456586;
-  font-size: max(15vw, 60px);
+  font-size: clamp(60px, 15vw, 288px);
   font-weight: bold;
   width: 80%;
   height: max(18vw, 70px);
   z-index: 10;
-  position: absolute;
   -webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-}
-.titleLine {
-  margin: 0 auto 0 7%;
-  width: 80%;
-  height: max(7vw, 35px);
-  background-color: #ff2;
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
+  display: inline;
+  background: -moz-linear-gradient(top, transparent 50%, #FFFF22B3 50%);
+  background: -webkit-linear-gradient(top, transparent 50%, #FFFF22B3 50%);
+  background: linear-gradient(to bottom, transparent 50%, #FFFF22B3 50%);
 }
 .main {
   background-color: #FAFAFA;
@@ -53,7 +46,7 @@
   background-color: #FAFAFA;
   text-align: left;
   color: #4A4A4A;
-  font-size: max(2vw, 13px);
+  font-size: clamp(16px, 2vw, 39px);
   line-height: max(4vw, 20px);
   text-align: justify;
   text-justify: auto;
@@ -63,15 +56,21 @@
 }
 /* スマホ以上 */
 @media screen and (min-width: 481px) {
+  .titleContent {
+    margin: 0 auto 0 8%;
+  }
   .main {
-    padding: 8vw 8% 10vh 0;
+    padding: 0 8% 10vh 0;
     margin: 0 auto 0 18vw;
   }
 }
 /* スマホ幅 */
 @media screen and (max-width: 480px) {
+  .titleContent {
+    margin: 0 auto 0 20px;
+  }
   .main {
-    padding: 8vh 0 10vh 0;
+    padding: 0 0 10vh 0;
     margin: 0 auto;
     display: flex;
   }
