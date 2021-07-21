@@ -1,14 +1,9 @@
 <template>
-  <div class="download_button">
-    <a
-      :href="downloadRedirectLink"
-      target="_blank"
-      class="download_link"
-      title="ZIPファイルのダウンロード"
-      >
+  <div class="download_button" @click="$emit('click')">
+    <div class="download_link" >
         <font-awesome-icon :icon="['fas', 'file-download']" id="fa"/>
         ZIPダウンロード
-      </a>
+      </div>
   </div>
 </template>
 
