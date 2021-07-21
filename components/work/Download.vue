@@ -1,7 +1,7 @@
 <template>
   <div class="download_button">
     <a
-      :href="download_link"
+      :href="downloadRedirectLink"
       target="_blank"
       class="download_link"
       title="ZIPファイルのダウンロード"
@@ -15,12 +15,17 @@
 <script>
 export default {
   props: {
-    download_link: {
+    workID: {
       type: String,
       require: true,
-      default: "https://drive.google.com/uc?export=download&id=122bfV2gtg6bfwYkmAQfrws4-6vFZbqII"
+      default: "1"
     },
   },
+  computed: {
+    downloadRedirectLink() {
+      return `https://shared-vps.compositecomputer.club/api/v1/works/${this.workID}/download`
+    }
+  }
 };
 </script>
 
