@@ -2,24 +2,25 @@
   <footer>
     <ul>
       <li>
-        <a href="https://oc2021.compositecomputer.club/"
-          ><img id="logo" src="../static/Footer/C3logo.png" alt="logo"
-        /></a>
+        <a href="https://oc2021.compositecomputer.club/" target="_blank" title="OC2021">
+          <img id="logo" src="../static/Footer/C3logo.png" alt="logo"/>
+        </a>
       </li>
       <div class="linkBox">
-        <a class="linkItem" href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw">
-					<font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
-				</a>
-        <a class="linkItem" href="https://twitter.com/c3_kyutech?s=20">
-					<font-awesome-icon class="icon" :icon="['fab', 'twitter']" />
+        <a class="linkItem" href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank" title="C3 YouTube Channel">
+          <font-awesome-icon class="icon" :icon="['fab', 'youtube']" />
         </a>
-        <a class="note linkItem" href="https://note.com/c3noteproject">note</a>
+        <a class="linkItem" href="https://twitter.com/c3_kyutech?s=20" target="_blank" title="C3 Twitter">
+          <font-awesome-icon class="icon" :icon="['fab', 'twitter']" />
+        </a>
+        <a class="note" href="https://note.com/c3noteproject" target="_blank" title="C3 note"><img src="../static/Footer/note-logo.svg"></a>
       </div>
-      <li>
+      <li class="text-link-box">
         <a
           class="link"
           href="https://compositecomputer.club/"
           target="_blank"
+          title="C3 Official Website"
         >
           C3 Official Website<font-awesome-icon class="link-icon" icon="external-link-alt" />
         </a>
@@ -28,6 +29,7 @@
           class="link"
           href="https://www.iizuka.kyutech.ac.jp/"
           target="_blank"
+          title="Kyutech HP"
         >
           情報工学部<font-awesome-icon class="link-icon" icon="external-link-alt" />
         </a>
@@ -52,6 +54,9 @@ footer {
   position: relative;
   /* z-index: 20; */
 }
+a::selection, div::selection, button::selection {
+  background: #4565863d;
+}
 a:hover {
   opacity: 0.5;
 }
@@ -67,11 +72,25 @@ button:hover {
   justify-content: baseline;
   align-items: center;
 }
+.linkBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.linkItem {
+  width: 50px;
+  flex-shrink: 0;
+  text-align: center;
+}
 a.note {
   color: white;
 	text-decoration: none;
 	/*margin: auto 8px;*/
 	font-size: 18px;
+}
+.note img {
+  width: 60px;
+  margin: -10px;
 }
 .icon {
 	color: white;
@@ -87,7 +106,7 @@ a.note {
     list-style: none;
   }
   li {
-    margin: 0 15px;
+    margin: 0px;
   }
   a {
     margin: 10px 12px 10px 12px;
@@ -96,9 +115,6 @@ a.note {
     height: 70px;
     width: 70px;
     border-radius: 50%;
-  }
-  .linkBox {
-    display: flex;
   }
   .link {
     display: flex;
@@ -123,7 +139,7 @@ a.note {
     color: lightgray;
     position: absolute;
     right: 8%;
-    bottom: 8%;
+    bottom: 30px;
   }
 }
 /* スマホ/タブレット縦 */
@@ -151,22 +167,24 @@ a.note {
   a.link {
     margin: auto;
   }
+  .text-link-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
   .link {
-    padding-bottom: 5px;
-    border-bottom: solid 0.5px lightgray;
+    padding-bottom: 7px;
+    border-bottom: solid 0.5px rgba(255, 255, 255, 0.8);
+    display: inline-block;
   }
   .linkBox {
     position: absolute;
-    bottom: 25%;
+    bottom: 23%;
     left: 0;
     right: 0;
     margin: auto;
-    display: flex;
-    justify-content: center;
   }
-	.linkItem {
-		flex-basis: 50px;
-	}
   .link-icon {
     font-size: 10px;
     margin-left: 5px;
@@ -187,7 +205,7 @@ a.note {
   .copyRight {
     color: lightgray;
     margin-top: 70px;
-    font-size: 8px;
+    font-size: 12px;
     display: flex;
     justify-content: center;
   }
