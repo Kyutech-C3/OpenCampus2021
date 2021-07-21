@@ -13,7 +13,7 @@
                 <viewer :mediaAssets="media_assets" />
             </div>
             <div class="work_info">
-                <download :download_link="download_link" class="download" v-if="download_link != ull"/>
+                <download :workID="work_id" class="download" v-if="download_link != null"/>
                 <div class="member_title">
                     <font-awesome-icon :icon="['fas', 'users']" />
                     <span>制作者</span>
