@@ -1,8 +1,8 @@
 <template>
     <div class="footer2">
-        <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank" class="link" id="youtube" title="YouTube生配信中！ 13:00-16:00">
+        <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank" class="link" id="youtube" title="YouTube">
             <font-awesome-icon :icon="['fab', 'youtube']" class="icon"/>
-            <span class="title">&laquo; YouTubeでライブ配信中！</span>
+            <span class="title">&laquo; YouTube</span>
         </a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKmF9kHCJQNp-oVhKxrIaOjvYl6q-3P6GfmolNs7nuULYYYA/viewform" target="_blank" class="link" id="survey" title="アンケート">
             <font-awesome-icon :icon="['fas', 'file-alt']" class="icon"/>
