@@ -37,10 +37,10 @@ export default ({
     handleScroll() {
       const elementY = this.$refs.target.getBoundingClientRect().top;
       const y = window.pageYOffset;
-      console.log({
-        y: y,
-        elementY: elementY
-      });
+      // console.log({
+      //   y: y,
+      //   elementY: elementY
+      // });
       if (!this.visible) {
         this.visible = (elementY < window.innerHeight);
       } else if (elementY > window.innerHeight) {
