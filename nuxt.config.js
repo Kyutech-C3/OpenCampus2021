@@ -54,7 +54,14 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    [
+      '@nuxtjs/google-gtag',
+      {
+        id: 'G-HT71B54RCT',
+        debug: true
+      }
+    ]
   ],
 
   axios: {
