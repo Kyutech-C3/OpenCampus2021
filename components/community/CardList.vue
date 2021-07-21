@@ -32,7 +32,7 @@ export default {
 .card-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  row-gap: 50px;
-  column-gap: 50px;
+  row-gap: 38px;
+  column-gap: 26px;
 } 
 </style>
