@@ -1,6 +1,19 @@
 # Open-Campus-2021
 
-## 開発目標：7月15日に完成
+## ~~開発目標：7月15日に完成~~
+## 2021/07/21完成！！！！！！！！！！
+
+(C3 OpenCampus2021)[https://oc2021.compositecomputer.club/]
+
+お疲れさまでした！！！！！！！！！
+
+![C3 OpenCampus2021 - Google Chrome 2021_07_22 0_04_52](https://user-images.githubusercontent.com/65708479/126512645-1243b063-e73b-4600-b799-6ce57b483c35.png)
+
+![C3 OpenCampus2021 - Google Chrome 2021_07_22 0_05_02](https://user-images.githubusercontent.com/65708479/126512664-167c5bc4-cf8e-4a26-bff1-cf90a6bc8923.png)
+
+![C3 OpenCampus2021 - Google Chrome 2021_07_22 0_05_08](https://user-images.githubusercontent.com/65708479/126512678-b11d27c2-6409-48e6-863e-a88392103660.png)
+
+![C3 OpenCampus2021 - Google Chrome 2021_07_21 23_48_40](https://user-images.githubusercontent.com/65708479/126512767-4ac6e9e2-c5cd-40e1-a0cb-de6d738a8a64.png)
 
 ## Build Setup
 
