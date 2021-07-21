@@ -13,7 +13,8 @@
                 <viewer :mediaAssets="media_assets" />
             </div>
             <div class="work_info">
-                <download :workID="work_id" class="download" v-if="download_link != null"/>
+                <download-button :download_link="download_link" class="download" v-if="download_link != null" @click="openDownloadConfirmModal" />
+                <download-confirm-modal v-model="isDownloadConfirmOpen" :workID="work_id" />
                 <div class="member_title">
                     <font-awesome-icon :icon="['fas', 'users']" />
                     <span>制作者</span>
@@ -37,17 +38,19 @@
 
 <script>
 import Favorite from "./Favorite.vue"
-import Download from "./Download.vue"
+import DownloadButton from "./DownloadButton.vue"
 import Viewer from "./Viewer.vue"
 import TagList from './TagList.vue'
 import WorkLink from './WorkLink.vue'
+import DownloadConfirmModal from './DownloadConfirmModal.vue'
 export default {
     components: {
         Favorite,
-        Download,
+        DownloadButton,
         Viewer,
         TagList,
-        WorkLink
+        WorkLink,
+        DownloadConfirmModal
     },
     data() {
         return {
@@ -143,11 +146,20 @@ export default {
             required: true
         },
     },
+    data() {
+        return {
+            isDownloadConfirmOpen: false
+        }
+    },
     methods: {
 		zeroPadding(num, length) {
 			return ('0000000000' + num).slice(-length);
-		}
-	}
+		},
+        openDownloadConfirmModal() {
+            this.isDownloadConfirmOpen = true;
+        }
+	},
+
 }
 </script>
 
