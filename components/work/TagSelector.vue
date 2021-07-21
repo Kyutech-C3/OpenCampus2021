@@ -3,7 +3,7 @@
 		<div class="tag-selector-header">
 			<font-awesome-icon icon="search" />
 			<div class="label">タグで探す</div>
-			<TagButton class="all-select-button" name="All" color="#808080" small @click="selectAllTags" />
+			<TagButton class="all-select-button" name="クリア" color="#808080" :enabled="selectedTags.length > 0" small @click="clearSelectedTags" />
 			<v-select class="tag-select" :options="options" :value="[]" @option:selected="handleSelect" />
 		</div>
 		<div class="tag-list-container">
@@ -85,11 +85,8 @@ export default {
 		getSelected(tag) {
 			return this.selectedTags.find((t) => (tag.id === t.id)) !== undefined
 		},
-		selectAllTags() {
-			if(this.hasAllTagSelected)
-				this.$emit('selectTags', [])
-			else
-				this.$emit('selectTags', this.tags)
+		clearSelectedTags() {
+			this.$emit('selectTags', [])
 		}
 	}
 }
@@ -135,5 +132,9 @@ export default {
 
 .tag-select {
 	margin-left: .5rem;
+}
+.tag-selector-header >>> .vs__dropdown-menu {
+	width: auto;
+	z-index: 10;
 }
 </style>

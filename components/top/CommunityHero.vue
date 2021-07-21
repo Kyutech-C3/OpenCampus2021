@@ -2,7 +2,7 @@
   <div class="community-hero" :style="styles">
     <h1 class="name">{{ item.name }}</h1>
     <div class="description">{{ item.description }}</div>
-    <a class="button-wrapper" :href="item.linkUrl">
+    <a class="button-wrapper" :href="item.linkUrl" :title="item.name">
       <span class="button-text">もっとみる→</span>
     </a>
   </div>
@@ -58,11 +58,11 @@ export default {
 .community-hero:before {
   content: "";
   background: inherit;
-  -webkit-filter: blur(4px);
-  -moz-filter: blur(4px);
-  -o-filter: blur(4px);
-  -ms-filter: blur(4px);
-  filter: blur(4px);
+  -webkit-filter: blur(4px) brightness(60%);
+  -moz-filter: blur(4px) brightness(60%);
+  -o-filter: blur(4px) brightness(60%);
+  -ms-filter: blur(4px) brightness(60%);
+  filter: blur(4px) brightness(60%);
   position: absolute;
   top: -5px;
   left: -5px;
@@ -78,8 +78,8 @@ export default {
 }
 
 .name {
-  font-size: 12vw;
-  color: rgba(0, 0, 0, 0);
+  font-size: clamp(90px, 12vw, 231px);
+  color: rgba(255, 255, 255, 0.15);
   padding-top: 60px;
   padding-left: 100px;
   position: absolute;
@@ -105,7 +105,7 @@ export default {
 }
 
 .description {
-  font-size: 2vw;
+  font-size: clamp(15px, 2vw, 39px);
   margin: 20% 10% 0 30%;
   letter-spacing: 4px;
   line-height: 1.3em;

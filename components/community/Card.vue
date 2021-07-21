@@ -1,6 +1,6 @@
 <template>
-  <nuxt-link :to="workPath" class="card-link">
-    <article class="card">
+  <div @click="$router.push(workPath)" class="card-link">
+    <article class="article">
       <img :src="card_image" alt="thumbnail" title="thumbnail" class="thumbnail"/>
       <div class="tag_viewer1" v-if="isHoverFlag">
       </div>
@@ -20,7 +20,7 @@
           <div class="description">{{description}}</div>
       </div>
     </article>
-  </nuxt-link>
+  </div>
 </template>
 
 <script>
@@ -82,12 +82,10 @@ export default {
 
 <style scoped>
 .card-link {
-  margin: 15px;
   text-decoration: none;
   color: #000000 ;
 }
-.card {
-  width: 300px;
+.article {
   height: 380px;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.24);
@@ -95,19 +93,18 @@ export default {
   cursor: pointer;
   overflow: hidden;
 }
-.card:hover {
+.article:hover {
   box-shadow: 0 0 20px 2px rgb(0 0 0 / 50%);
 }
 .content {
   position: relative;
-  width: 300px;
   height: 270px;
   padding: 10px 15px 10px 15px;
   overflow: hidden;
 }
 .thumbnail {
   position: relative;
-  width: 300px;
+  width: 100%;
   height: 220px;
   object-fit: cover;
 }
@@ -154,16 +151,5 @@ export default {
   white-space: normal;
   overflow: hidden;
   -webkit-box-orient: vertical;
-}
-@media screen and (max-width: 370px) {
-  .card {
-    width: 230px;
-  }
-  .content {
-    width: 230px;
-  }
-  .thumbnail {
-    width: 230px;
-  }
 }
 </style>

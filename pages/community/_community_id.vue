@@ -99,7 +99,9 @@ div {
 .container {
   display: flex;
   flex-direction: column;
+  margin: auto;
   margin-top: 2rem;
+  max-width: 1320px;
 }
 .row {
   display: flex;
