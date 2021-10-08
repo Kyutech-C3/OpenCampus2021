@@ -31,7 +31,7 @@ $ npm run start
 # generate static project
 $ npm run generate
 
-# storybookの起動方法
+# storybookの起動
 $ npx nuxt storybook
 ```
 ## ブランチを切る前に
@@ -87,6 +87,18 @@ OpenCampus2020 Official Site のリメイク版OpenCampus2021 Official Site の�
 
 **暫定版は ```develop```ブランチにマージ, 安定版は ```main```ブランチにマージ**
 
+## メンバー
+- シモ(リーダー)
+- そとはね
+- ふぃる
+- shuuuu
+- Pingeons house
+- ko_suke(初web、初グループ開発)
+- ざつ(初web、初グループ開発)
+- notchcoder(初グループ開発)
+- rkun
+- Prokuma(CTO)
+
 ## 担当
 **デザイン**
 - notchcoder
@@ -105,6 +117,3 @@ OpenCampus2020 Official Site のリメイク版OpenCampus2021 Official Site の�
 **バックエンド**
 - rkun
 
-![image](https://simo-c3.github.io/image_url/remake-role1.JPG)
-![image](https://simo-c3.github.io/image_url/remake-role2.JPG)
-![image](https://simo-c3.github.io/image_url/remake-role3.JPG)
