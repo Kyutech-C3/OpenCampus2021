@@ -52,7 +52,7 @@ export default {
       },
       { hid: "tw-site", name: "twitter:site", content: "@Twitter" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "favicon.ico" }],
     script: [
       {
         src: "/ghpagespathsolver.js",
