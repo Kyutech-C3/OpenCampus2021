@@ -1,10 +1,3 @@
-/**
-  * Hopper 0.3.4
-  * (c) 2019
-    * @license MIT
-    */
-
-
 /*!
   * vue-router v3.5.2
   * (c) 2021 Evan You
@@ -16,6 +9,13 @@
  * (c) 2014-2021 Evan You
  * Released under the MIT License.
  */
+
+
+/**
+  * Hopper 0.3.4
+  * (c) 2019
+    * @license MIT
+    */
 
 
 /*!
