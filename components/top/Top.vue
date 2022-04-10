@@ -336,7 +336,7 @@
 
 @media screen and (max-aspect-ratio: 1/1) {
   .bgimg {
-    background-image: url("/static/topimgSP.png");
+    background-image: url("/topimgSP.png");
     width: 100vw;
   }
 }
