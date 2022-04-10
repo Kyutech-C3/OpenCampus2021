@@ -45,11 +45,7 @@ export default {
         content: "https://oc2021.compositecomputer.club/oc2021-pc.jpg",
       },
       { hid: "fb:app_id", property: "fb:app_id", content: "App-ID" },
-      {
-        hid: "tw-card",
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
+      { hid: "tw-card", name: "twitter:card", content: "summary_large_image" },
       { hid: "tw-site", name: "twitter:site", content: "@Twitter" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "favicon.ico" }],

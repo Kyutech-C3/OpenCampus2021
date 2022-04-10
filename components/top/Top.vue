@@ -7,13 +7,27 @@
         <span class="fri ss01">23</span><span class="blank">_</span>
       </div>
       <div class="scroll cv05" @click="scroll">scroll</div>
-      <a href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw" target="_blank" title="YouTube" class="link youtube">
+      <a
+        href="https://www.youtube.com/channel/UCeRY2jujVBYRqmilrCZytFw"
+        target="_blank"
+        title="YouTube"
+        class="link youtube"
+      >
         <font-awesome-icon :icon="['fab', 'youtube']" class="icon" />
-        <div class="hide"><span class="fs14">« </span><span class="up">YouTube</span></div>
+        <div class="hide">
+          <span class="fs14">« </span><span class="up">YouTube</span>
+        </div>
       </a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKmF9kHCJQNp-oVhKxrIaOjvYl6q-3P6GfmolNs7nuULYYYA/viewform" target="_blank" title="アンケート" class="link googleform">
-        <img src="../../static/googleform.png" alt="img">
-        <div class="hide"><span class="fs14">« </span><span class="up">アンケート実施中！</span></div>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdKmF9kHCJQNp-oVhKxrIaOjvYl6q-3P6GfmolNs7nuULYYYA/viewform"
+        target="_blank"
+        title="アンケート"
+        class="link googleform"
+      >
+        <img src="../../static/googleform.png" alt="img" />
+        <div class="hide">
+          <span class="fs14">« </span><span class="up">アンケート実施中！</span>
+        </div>
       </a>
       <div class="bgimg"></div>
     </div>
@@ -27,9 +41,9 @@
   position: relative;
   padding: 20vh 6vw 0 6vw;
   -webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   --size: max(calc(calc(5vw + 10vh) / 3), 30px);
   --size-l: calc(calc(5vw + 5vh) / 2.4);
 }
@@ -46,9 +60,21 @@
   letter-spacing: 0.2vw;
   color: white;
   display: inline;
-  background: -moz-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.5) 50%);
-  background: -webkit-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.5) 50%);
-  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5) 50%);
+  background: -moz-linear-gradient(
+    top,
+    transparent 50%,
+    rgba(0, 0, 0, 0.5) 50%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    transparent 50%,
+    rgba(0, 0, 0, 0.5) 50%
+  );
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.5) 50%
+  );
 }
 
 .date {
@@ -67,7 +93,7 @@
 }
 
 .thu::after {
-  content: 'Thu';
+  content: "Thu";
   transform: rotate(90deg);
   position: absolute;
   top: 3vw;
@@ -83,7 +109,7 @@
 }
 
 .fri::after {
-  content: 'Fri';
+  content: "Fri";
   transform: rotate(90deg);
   position: absolute;
   top: 3vw;
@@ -103,11 +129,11 @@
 }
 
 .ss01 {
-  font-feature-settings: 'ss01';
+  font-feature-settings: "ss01";
 }
 
 .cv05 {
-  font-feature-settings: 'cv05';
+  font-feature-settings: "cv05";
 }
 
 .topwrapper a {
@@ -149,24 +175,36 @@
 
 .youtube {
   transform: translate(-80px, -160px);
-  transform: translate(calc(var(--size) * (-80) / 60), calc(var(--size) * (-160) / 60));
+  transform: translate(
+    calc(var(--size) * (-80) / 60),
+    calc(var(--size) * (-160) / 60)
+  );
   transition: 0.4s;
 }
 
 .youtube:hover {
   transform: translate(-70px, -160px);
-  transform: translate(calc(var(--size) * (-70) / 60), calc(var(--size) * (-160) / 60));
+  transform: translate(
+    calc(var(--size) * (-70) / 60),
+    calc(var(--size) * (-160) / 60)
+  );
 }
 
 .googleform {
   transform: translate(-80px, -80px);
-  transform: translate(calc(var(--size) * (-80) / 60), calc(var(--size) * (-80) / 60));
+  transform: translate(
+    calc(var(--size) * (-80) / 60),
+    calc(var(--size) * (-80) / 60)
+  );
   transition: 0.4s;
 }
 
 .googleform:hover {
   transform: translate(-70px, -80px);
-  transform: translate(calc(var(--size) * (-70) / 60), calc(var(--size) * (-80) / 60));
+  transform: translate(
+    calc(var(--size) * (-70) / 60),
+    calc(var(--size) * (-80) / 60)
+  );
 }
 
 .link div {
@@ -236,7 +274,7 @@
 }
 
 .scroll::before {
-  content: '';
+  content: "";
   background: transparent;
   height: 10vh;
   width: 60%;
@@ -246,10 +284,28 @@
 }
 
 .scroll::after {
-  content: '';
-  background: -moz-linear-gradient(bottom, white 25%, transparent 25%, transparent 75%, white 75%);
-  background: -webkit-linear-gradient(bottom, white 25%, transparent 25%, transparent 75%, white 75%);
-  background: linear-gradient(to top, white 25%, transparent 25%, transparent 75%, white 75%);
+  content: "";
+  background: -moz-linear-gradient(
+    bottom,
+    white 25%,
+    transparent 25%,
+    transparent 75%,
+    white 75%
+  );
+  background: -webkit-linear-gradient(
+    bottom,
+    white 25%,
+    transparent 25%,
+    transparent 75%,
+    white 75%
+  );
+  background: linear-gradient(
+    to top,
+    white 25%,
+    transparent 25%,
+    transparent 75%,
+    white 75%
+  );
   background-size: auto 400%;
   background-position: center bottom;
   height: 10vh;
@@ -265,7 +321,7 @@
 }
 
 .bgimg {
-  background-image: url(../../static/topimgPC.jpg);
+  background-image: url("/topimgPC.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -278,15 +334,10 @@
   z-index: -10;
 }
 
-/* @media screen and (max-width: 481px) {
-  .bgimg {
-    background-image: url(../../static/topimgSP.jpg);
-  }
-} */
-
 @media screen and (max-aspect-ratio: 1/1) {
   .bgimg {
-    background-image: url(../../static/topimgSP.png);
+    background-image: url("/static/topimgSP.png");
+    width: 100vw;
   }
 }
 </style>
@@ -295,11 +346,11 @@
 export default {
   methods: {
     scroll() {
-      window.scrollTo ({
+      window.scrollTo({
         top: window.innerHeight,
-        behavior: 'smooth',
-      })
+        behavior: "smooth"
+      });
     }
   }
-}
+};
 </script>
