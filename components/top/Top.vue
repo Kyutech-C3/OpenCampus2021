@@ -38,6 +38,7 @@
 .topwrapper {
   background: rgba(0, 0, 0, 0.5);
   height: 100vh;
+  height: 100dvh;
   position: relative;
   padding: 20vh 6vw 0 6vw;
   -webkit-user-select: none;
@@ -327,6 +328,7 @@
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
+  height: 100dvh;
   width: 100%;
   position: absolute;
   top: 0;
@@ -337,7 +339,6 @@
 @media screen and (max-aspect-ratio: 1/1) {
   .bgimg {
     background-image: url("/topimgSP.png");
-    height: 100%;
     width: 100vw;
   }
 }
